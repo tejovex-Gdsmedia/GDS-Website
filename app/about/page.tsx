@@ -4,103 +4,158 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageHero, CtaSection, TestimonialPlaceholder } from "@/components/ui/shared";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import Revealable from "@/components/animations/Revealable";
 
 const routeConfig = getRoute("/about")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
 
+const HOME_FAQS = [
+  {
+    question: "What is the GDS Lead-to-Sale Engine?",
+    answer: "It is an end-to-end connected system that takes your business from Brand Blueprint → AI Ad Creative → Meta & Google Ads → Instant WhatsApp Reply → AI Voice Follow-Up → Closed Sales. No disconnected agencies."
+  },
+  {
+    question: "How do AI ad films compare to traditional shoots?",
+    answer: "Cinematic AI ad films deliver Hollywood-grade visuals and storytelling at a fraction of traditional shoot costs, without crew rentals, set delays or logistics overhead."
+  },
+  {
+    question: "How fast can we launch our first campaign?",
+    answer: "TODO: confirm with GDS Media. Typically campaigns are planned and launched within 7–10 days of completing the Brand Blueprint."
+  },
+  {
+    question: "Do you work with businesses outside major metros?",
+    answer: "Yes, we work with MSMEs, clinics, salons, real estate, and retail businesses across India, with remote strategy and execution available nationwide."
+  },
+];
+
 export default function AboutPage() {
   return (
     <div>
-      <JsonLd
-        data={breadcrumbSchema([
-          { name: "Home", href: "/" },
-          { name: "About", href: "/about" },
-        ])}
-      />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
+      ])} />
 
-      <PageHero
-        title="About GDS Media"
-        subtitle="We combine AI specialists, content strategists and performance marketers to help Indian businesses compete and win."
-        badge="Our Mission & Team"
-        breadcrumbs={[{ label: "About", href: "/about" }]}
-      />
+      <Revealable>
+        <PageHero
+          title="About GDS Media"
+          subtitle="We combine AI specialists, content strategists and performance marketers to help Indian businesses compete and win."
+          badge="Our Mission & Team"
+          breadcrumbs={[{ label: "About", href: "/about" }]}
+        />
+      </Revealable>
 
-      <section className="py-24 px-4 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-          <div>
-            <h2 className="font-display text-3xl font-bold text-brand-white mb-6">
-              Making AI Marketing Accessible & Affordable for Every Indian MSME
-            </h2>
-            <p className="text-brand-white/70 text-base leading-relaxed mb-4">
-              Traditional advertising agencies are built for large enterprises with multi-crore budgets and months of production time. For most Indian business owners — in healthcare, real estate, retail, or hospitality — that model simply doesn&apos;t work.
-            </p>
-            <p className="text-brand-white/70 text-base leading-relaxed">
-              GDS Media was founded to bridge this gap. By combining cutting-edge AI creative tools with rigorous marketing strategy and automated sales funnels, we deliver premium agency results at a fraction of traditional shoot costs.
-            </p>
+      <Revealable>
+        <section className="py-32 px-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-28">
+            <div className="md:col-span-7">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 border-2 border-brand-gold/30 inline-block mb-6">
+                // MISSION STATEMENT
+              </span>
+              <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-white uppercase tracking-tight mb-6 leading-tight">
+                Making AI Marketing Accessible & Affordable for Every Indian MSME
+              </h2>
+              <p className="font-mono text-brand-white/70 text-sm sm:text-base leading-relaxed mb-6">
+                Traditional advertising agencies are built for large enterprises with multi-crore budgets and months of production time. For most Indian business owners — in healthcare, real estate, retail, or hospitality — that model simply doesn't work.
+              </p>
+              <p className="font-mono text-brand-white/70 text-sm sm:text-base leading-relaxed">
+                GDS Media was founded to bridge this gap. By combining cutting-edge AI creative tools with rigorous marketing strategy and automated sales funnels, we deliver premium agency results at a fraction of traditional shoot costs.
+              </p>
+            </div>
+            <div className="md:col-span-5 border-2 border-brand-gold/40 bg-brand-gray/40 p-8 sm:p-10">
+              <h3 className="font-display text-xl font-black text-brand-gold uppercase tracking-wider mb-6 border-b border-brand-gold/30 pb-3">
+                // Core Principles
+              </h3>
+              <ul className="space-y-6 font-mono text-xs sm:text-sm text-brand-white/90">
+                <li className="flex items-start gap-4 border-b border-brand-white/10 pb-4">
+                  <span className="text-brand-gold font-black text-base">1.</span>
+                  <span>Strategy before AI: Technology without positioning is just expensive noise.</span>
+                </li>
+                <li className="flex items-start gap-4 border-b border-brand-white/10 pb-4">
+                  <span className="text-brand-gold font-black text-base">2.</span>
+                  <span>Sales don't stop at the lead: Instant WhatsApp replies and voice follow-ups close the gap.</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="text-brand-gold font-black text-base">3.</span>
+                  <span>Radical transparency: No vanity metrics, no hidden fees, clear accountability.</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="border border-brand-gold/20 bg-brand-gray rounded-2xl p-8">
-            <h3 className="font-display text-xl font-bold text-brand-gold mb-4">Core Principles</h3>
-            <ul className="space-y-4 text-sm text-brand-white/80">
-              <li className="flex items-start gap-3">
-                <span className="text-brand-gold font-bold">1.</span> Strategy before AI: Technology without positioning is just expensive noise.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-brand-gold font-bold">2.</span> Sales don&apos;t stop at the lead: Instant WhatsApp replies and voice follow-ups close the gap.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-brand-gold font-bold">3.</span> Radical transparency: No vanity metrics, no hidden fees, clear accountability.
-              </li>
-            </ul>
-          </div>
-        </div>
+        </section>
+      </Revealable>
 
-        {/* Team / Expertise section */}
-        <div className="border-t border-brand-gold/10 pt-20">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-display text-3xl font-bold text-brand-white mb-4">
+      <Revealable>
+        <section className="border-t-2 border-brand-gold/40 pt-28">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+              // MULTIDISCIPLINARY EXPERTISE
+            </span>
+            <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-white uppercase tracking-tighter mt-4 mb-4">
               The GDS Expertise
             </h2>
-            <p className="text-brand-white/60 text-base">
+            <p className="font-mono text-brand-white/60 text-base">
               Our multidisciplinary team brings together deep expertise across three critical domains.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-brand-gray border border-brand-gold/10 rounded-xl p-6">
-              <h3 className="font-display text-lg font-bold text-brand-gold mb-2">AI Specialists</h3>
-              <p className="text-brand-white/70 text-sm leading-relaxed">
+            <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
+              <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30 mb-4 inline-block">
+                DOMAIN 01
+              </span>
+              <h3 className="font-display text-xl font-black text-brand-white uppercase tracking-tight mb-3">
+                AI Specialists
+              </h3>
+              <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed">
                 Prompt engineers, generative video creators, and automation architects building bespoke workflows for your brand.
               </p>
             </div>
-            <div className="bg-brand-gray border border-brand-gold/10 rounded-xl p-6">
-              <h3 className="font-display text-lg font-bold text-brand-gold mb-2">Content Strategists</h3>
-              <p className="text-brand-white/70 text-sm leading-relaxed">
+            <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
+              <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30 mb-4 inline-block">
+                DOMAIN 02
+              </span>
+              <h3 className="font-display text-xl font-black text-brand-white uppercase tracking-tight mb-3">
+                Content Strategists
+              </h3>
+              <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed">
                 Experienced copywriters and storytellers who understand Indian consumer psychology and regional nuances.
               </p>
             </div>
-            <div className="bg-brand-gray border border-brand-gold/10 rounded-xl p-6">
-              <h3 className="font-display text-lg font-bold text-brand-gold mb-2">Performance Marketers</h3>
-              <p className="text-brand-white/70 text-sm leading-relaxed">
+            <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
+              <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30 mb-4 inline-block">
+                DOMAIN 03
+              </span>
+              <h3 className="font-display text-xl font-black text-brand-white uppercase tracking-tight mb-3">
+                Performance Marketers
+              </h3>
+              <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed">
                 Media buyers and funnel experts obsessed with ROAS, lead quality, and cost-per-acquisition.
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Revealable>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-brand-gray/20 border-t border-brand-gold/10 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl font-bold text-brand-white mb-4">What Clients Say</h2>
-            <p className="text-brand-white/60 text-sm">Real feedback from business owners who work with GDS Media.</p>
+      <Revealable>
+        <section className="py-32 bg-brand-black border-t-2 border-brand-gold/40 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-20">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+                // SOCIAL PROOF
+              </span>
+              <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-white uppercase tracking-tighter mt-4 mb-4">
+                What Clients Say
+              </h2>
+              <p className="font-mono text-brand-white/60 text-sm">Real feedback from business owners who work with GDS Media.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <TestimonialPlaceholder />
+              <TestimonialPlaceholder />
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <TestimonialPlaceholder />
-            <TestimonialPlaceholder />
-          </div>
-        </div>
-      </section>
+        </section>
+      </Revealable>
 
       <CtaSection />
     </div>

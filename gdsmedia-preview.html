@@ -1,0 +1,274 @@
+<title>GDS Media — AI Marketing for Indian MSMEs</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    darkMode: ['class', ':root[data-theme="dark"]'],
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            black: '#0A0A0A',
+            dark: '#121212',
+            gray: '#1A1A1A',
+            gold: '#D4AF37',
+            'gold-light': '#F3E5AB',
+            white: '#FAFAFA',
+          }
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['Syne', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    --bg: #0A0A0A;
+    --fg: #FAFAFA;
+    --accent: #D4AF37;
+    --card-bg: #161616;
+    --border-color: rgba(212, 175, 55, 0.15);
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #FAFAFA;
+      --fg: #0A0A0A;
+      --accent: #C5A028;
+      --card-bg: #FFFFFF;
+      --border-color: rgba(197, 160, 40, 0.2);
+      color-scheme: light;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0A0A0A;
+    --fg: #FAFAFA;
+    --accent: #D4AF37;
+    --card-bg: #161616;
+    --border-color: rgba(212, 175, 55, 0.15);
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', sans-serif;
+  }
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+</style>
+
+<div class="min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-black">
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 bg-brand-black/80 backdrop-blur-md border-b border-brand-gold/20 px-4 sm:px-8 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-brand-gold flex items-center justify-center text-brand-black font-display font-bold text-xl">G</div>
+      <div>
+        <span class="font-display font-bold text-lg tracking-wide text-brand-white">GDS MEDIA</span>
+        <span class="block text-[10px] text-brand-gold tracking-widest uppercase">AI Marketing Agency</span>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-white/80">
+      <a href="#pillars" class="hover:text-brand-gold transition-colors">Pillars</a>
+      <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
+      <a href="#engine" class="hover:text-brand-gold transition-colors">Lead-to-Sale Engine</a>
+      <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
+    </div>
+    <div class="flex items-center space-x-3">
+      <a href="https://calendly.com/gdstejovex/ai-powered-marketing" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-brand-gold text-brand-black font-semibold text-xs sm:text-sm hover:bg-brand-gold-light transition-all shadow-lg shadow-brand-gold/10">
+        Book Strategy Call
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 pb-28 px-4 sm:px-8 max-w-6xl mx-auto text-center overflow-hidden">
+    <div class="absolute inset-0 -z-10 flex items-center justify-center opacity-10 pointer-events-none">
+      <div class="w-[600px] h-[600px] rounded-full bg-brand-gold blur-[140px]"></div>
+    </div>
+    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs font-semibold uppercase tracking-wider mb-8">
+      <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+      <span>AI-Powered Growth for Indian MSMEs</span>
+    </div>
+    <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-brand-white max-w-4xl mx-auto leading-[1.1] mb-6">
+      Cinematic AI Marketing <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-[#F3E5AB]">Without Agency Budgets</span>
+    </h1>
+    <p class="text-base sm:text-xl text-brand-white/70 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+      Stop losing leads to slow follow-ups. Get end-to-end AI ad production, instant WhatsApp chat assistants, and voice follow-up agents built for Indian businesses.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://calendly.com/gdstejovex/ai-powered-marketing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gold text-brand-black font-semibold text-base hover:bg-brand-gold-light transition-all shadow-xl shadow-brand-gold/20 text-center">
+        Book Your Strategy Call (Free)
+      </a>
+      <a href="https://wa.me/917400168255" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full border border-brand-gold/30 text-brand-gold font-semibold text-base hover:bg-brand-gold/10 transition-all text-center">
+        Chat on WhatsApp (+91 74001 68255)
+      </a>
+    </div>
+
+    <!-- Quick Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-12 border-t border-brand-gold/10 text-left">
+      <div class="bg-brand-dark/50 border border-brand-gold/10 p-5 rounded-xl">
+        <span class="block text-2xl sm:text-3xl font-display font-bold text-brand-gold">10x</span>
+        <span class="text-xs text-brand-white/60 uppercase tracking-wider">Ad Production Speed</span>
+      </div>
+      <div class="bg-brand-dark/50 border border-brand-gold/10 p-5 rounded-xl">
+        <span class="block text-2xl sm:text-3xl font-display font-bold text-brand-gold">&lt; 5s</span>
+        <span class="text-xs text-brand-white/60 uppercase tracking-wider">Instant Lead Reply</span>
+      </div>
+      <div class="bg-brand-dark/50 border border-brand-gold/10 p-5 rounded-xl">
+        <span class="block text-2xl sm:text-3xl font-display font-bold text-brand-gold">70%</span>
+        <span class="text-xs text-brand-white/60 uppercase tracking-wider">Lower Production Cost</span>
+      </div>
+      <div class="bg-brand-dark/50 border border-brand-gold/10 p-5 rounded-xl">
+        <span class="block text-2xl sm:text-3xl font-display font-bold text-brand-gold">24/7</span>
+        <span class="text-xs text-brand-white/60 uppercase tracking-wider">AI Sales Autopilot</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three Pillars Section -->
+  <section id="pillars" class="py-24 px-4 sm:px-8 max-w-6xl mx-auto w-full">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">Our Methodology</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand-white mt-2">The Three Pillars of GDS Media</h2>
+      <p class="text-brand-white/70 mt-3">Comprehensive AI-powered infrastructure designed to take businesses from brand strategy to closed sales.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-brand-dark border border-brand-gold/20 p-8 rounded-2xl relative group hover:border-brand-gold transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center font-display font-bold text-xl mb-6">01</div>
+        <h3 class="font-display text-xl font-bold text-brand-white mb-3">Blueprint</h3>
+        <p class="text-sm text-brand-white/70 leading-relaxed">Strategy + Brand positioning tailored specifically for Indian MSMEs, clinics, salons, real estate, and retail brands.</p>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/20 p-8 rounded-2xl relative group hover:border-brand-gold transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center font-display font-bold text-xl mb-6">02</div>
+        <h3 class="font-display text-xl font-bold text-brand-white mb-3">Studio</h3>
+        <p class="text-sm text-brand-white/70 leading-relaxed">AI Creative + Storytelling. Cinematic ad films, branded micro-dramas, AI avatars, and product explainers at a fraction of traditional shoot costs.</p>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/20 p-8 rounded-2xl relative group hover:border-brand-gold transition-colors">
+        <div class="w-12 h-12 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center font-display font-bold text-xl mb-6">03</div>
+        <h3 class="font-display text-xl font-bold text-brand-white mb-3">Growth Engine</h3>
+        <p class="text-sm text-brand-white/70 leading-relaxed">AI Advertising + Sales Automation. Meta/Google performance marketing backed by instant WhatsApp AI replies and voice follow-up bots.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead-to-Sale Engine -->
+  <section id="engine" class="py-24 px-4 sm:px-8 bg-brand-dark/60 border-y border-brand-gold/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">End-to-End Automation</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand-white mt-2">The GDS Lead-to-Sale Engine</h2>
+        <p class="text-brand-white/70 mt-3">Marketing shouldn't stop at the lead. We ensure every prospect is immediately engaged and converted.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-brand-black border border-brand-gold/10 p-6 rounded-xl">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-wider block mb-2">Step 1</span>
+          <h4 class="font-display font-bold text-brand-white text-lg mb-2">Brand Blueprint</h4>
+          <p class="text-xs text-brand-white/60 leading-relaxed">Defining your unique value proposition, target audience, and ad scripts.</p>
+        </div>
+        <div class="bg-brand-black border border-brand-gold/10 p-6 rounded-xl">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-wider block mb-2">Step 2</span>
+          <h4 class="font-display font-bold text-brand-white text-lg mb-2">Cinematic AI Ad</h4>
+          <p class="text-xs text-brand-white/60 leading-relaxed">High-converting video ads produced in days instead of months.</p>
+        </div>
+        <div class="bg-brand-black border border-brand-gold/10 p-6 rounded-xl">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-wider block mb-2">Step 3</span>
+          <h4 class="font-display font-bold text-brand-white text-lg mb-2">Instant WhatsApp AI</h4>
+          <p class="text-xs text-brand-white/60 leading-relaxed">Replies to every inquiry within seconds, 24/7, qualifying leads automatically.</p>
+        </div>
+        <div class="bg-brand-black border border-brand-gold/10 p-6 rounded-xl">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-wider block mb-2">Step 4</span>
+          <h4 class="font-display font-bold text-brand-white text-lg mb-2">Voice Follow-Up</h4>
+          <p class="text-xs text-brand-white/60 leading-relaxed">AI calling agent follows up with interested prospects to book appointments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-24 px-4 sm:px-8 max-w-6xl mx-auto w-full">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">What We Do</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand-white mt-2">Core AI Marketing Services</h2>
+      <p class="text-brand-white/70 mt-3">Purpose-built solutions for modern businesses looking to scale acquisition.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-brand-dark border border-brand-gold/10 p-6 rounded-xl hover:border-brand-gold/50 transition-all">
+        <h3 class="font-display font-bold text-brand-gold text-lg mb-2">Cinematic AI Ad Films</h3>
+        <p class="text-xs text-brand-white/70 leading-relaxed mb-4">Hollywood-grade commercial production using advanced generative AI and human direction.</p>
+        <span class="text-[11px] text-brand-gold/80 font-semibold uppercase tracking-wider">Studio Service</span>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/10 p-6 rounded-xl hover:border-brand-gold/50 transition-all">
+        <h3 class="font-display font-bold text-brand-gold text-lg mb-2">Instant WhatsApp Assistant</h3>
+        <p class="text-xs text-brand-white/70 leading-relaxed mb-4">24/7 automated WhatsApp chat assistant that answers questions and books clients.</p>
+        <span class="text-[11px] text-brand-gold/80 font-semibold uppercase tracking-wider">Growth Engine</span>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/10 p-6 rounded-xl hover:border-brand-gold/50 transition-all">
+        <h3 class="font-display font-bold text-brand-gold text-lg mb-2">Meta Ads Performance Lab</h3>
+        <p class="text-xs text-brand-white/70 leading-relaxed mb-4">Data-driven Facebook and Instagram ad campaigns optimized for high-intent ROI.</p>
+        <span class="text-[11px] text-brand-gold/80 font-semibold uppercase tracking-wider">Growth Engine</span>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/10 p-6 rounded-xl hover:border-brand-gold/50 transition-all">
+        <h3 class="font-display font-bold text-brand-gold text-lg mb-2">AI Brand Ambassador</h3>
+        <p class="text-xs text-brand-white/70 leading-relaxed mb-4">Custom AI digital twins and spokespersons representing your brand seamlessly in video.</p>
+        <span class="text-[11px] text-brand-gold/80 font-semibold uppercase tracking-wider">Studio Service</span>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/10 p-6 rounded-xl hover:border-brand-gold/50 transition-all">
+        <h3 class="font-display font-bold text-brand-gold text-lg mb-2">Voice Follow-Up Agent</h3>
+        <p class="text-xs text-brand-white/70 leading-relaxed mb-4">Autonomous AI voice calling agent that calls leads instantly to confirm bookings.</p>
+        <span class="text-[11px] text-brand-gold/80 font-semibold uppercase tracking-wider">Sales Automation</span>
+      </div>
+      <div class="bg-brand-dark border border-brand-gold/10 p-6 rounded-xl hover:border-brand-gold/50 transition-all">
+        <h3 class="font-display font-bold text-brand-gold text-lg mb-2">Brand Blueprint Strategy</h3>
+        <p class="text-xs text-brand-white/70 leading-relaxed mb-4">Deep market positioning and scripting blueprint designed to outpace competitors.</p>
+        <span class="text-[11px] text-brand-gold/80 font-semibold uppercase tracking-wider">Blueprint</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Booking CTA -->
+  <section id="contact" class="py-24 px-4 sm:px-8 max-w-4xl mx-auto w-full">
+    <div class="bg-brand-dark border border-brand-gold/30 p-8 sm:p-12 rounded-3xl text-center relative overflow-hidden shadow-2xl">
+      <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+      <span class="text-xs font-semibold text-brand-gold uppercase tracking-widest">Get Started Today</span>
+      <h2 class="font-display text-3xl sm:text-5xl font-bold text-brand-white mt-3 mb-4">Ready to Grow Your Business with AI?</h2>
+      <p class="text-brand-white/70 max-w-xl mx-auto mb-8 text-sm sm:text-base">
+        Book a free 30-minute 1-on-1 strategy consultation with our team or reach out directly on WhatsApp.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://calendly.com/gdstejovex/ai-powered-marketing" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gold text-brand-black font-semibold text-sm hover:bg-brand-gold-light transition-all shadow-xl shadow-brand-gold/20">
+          Book on Calendly
+        </a>
+        <a href="https://wa.me/917400168255" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-full border border-brand-gold/30 text-brand-gold font-semibold text-sm hover:bg-brand-gold/10 transition-all">
+          WhatsApp: +91 74001 68255
+        </a>
+      </div>
+      <div class="mt-8 text-xs text-brand-white/50">
+        Email: <a href="mailto:yogeshgdsmedia@gmail.com" class="text-brand-gold hover:underline">yogeshgdsmedia@gmail.com</a> · Hours: Mon–Sat, 11AM–8PM IST
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto border-t border-brand-gold/10 bg-brand-dark py-12 px-4 sm:px-8 text-brand-white/60 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded bg-brand-gold flex items-center justify-center text-brand-black font-display font-bold">G</div>
+        <span class="font-display font-bold text-brand-white text-sm">GDS Media</span>
+      </div>
+      <div class="flex items-center space-x-6">
+        <a href="#pillars" class="hover:text-brand-gold transition-colors">Pillars</a>
+        <a href="#services" class="hover:text-brand-gold transition-colors">Services</a>
+        <a href="#engine" class="hover:text-brand-gold transition-colors">Engine</a>
+        <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
+      </div>
+      <div>
+        <p>&copy; 2026 GDS Media. All rights reserved. <span class="block sm:inline">Canonical: https://www.gdsmedia.in</span></p>
+      </div>
+    </div>
+  </footer>
+</div>

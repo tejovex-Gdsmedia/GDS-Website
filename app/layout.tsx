@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter, Syne, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -19,6 +19,12 @@ const syne = Syne({
   variable: "--font-syne",
   display: "swap",
   weight: ["600", "700", "800"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -42,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${syne.variable}`}>
+    <html lang="en-IN" className={`${inter.variable} ${syne.variable} ${jetbrainsMono.variable}`}>
       <head>
         <JsonLd data={organizationSchema()} />
       </head>

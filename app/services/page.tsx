@@ -107,28 +107,35 @@ export default function ServicesPage() {
         breadcrumbs={[{ label: "Services", href: "/services" }]}
       />
 
-      <section className="py-24 px-4 max-w-7xl mx-auto">
+      <section className="py-32 px-4 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SERVICES_LIST.map((srv) => (
+          {SERVICES_LIST.map((srv, idx) => (
             <div
               key={srv.href}
-              className="bg-brand-gray border border-brand-gold/10 hover:border-brand-gold/30 rounded-2xl p-8 flex flex-col justify-between transition-all"
+              className="border-2 border-brand-gold/30 bg-brand-gray/30 p-8 flex flex-col justify-between hover:border-brand-gold transition-colors relative group"
             >
               <div>
-                <span className="text-xs font-bold text-brand-gold uppercase tracking-widest">
-                  {srv.category}
-                </span>
-                <h2 className="font-display text-xl font-bold text-brand-white mt-2 mb-3">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2.5 py-1 border border-brand-gold/30">
+                    // {srv.category}
+                  </span>
+                  <span className="font-mono text-xs text-brand-white/30">SVC.{idx < 9 ? `0${idx + 1}` : idx + 1}</span>
+                </div>
+                <h2 className="font-display text-2xl font-black text-brand-white uppercase tracking-tight mt-2 mb-4">
                   {srv.title}
                 </h2>
-                <p className="text-brand-white/70 text-sm leading-relaxed mb-6">{srv.desc}</p>
+                <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed mb-8">
+                  {srv.desc}
+                </p>
               </div>
-              <Link
-                href={srv.href}
-                className="text-sm font-semibold text-brand-gold hover:underline inline-flex items-center gap-1"
-              >
-                Learn More →
-              </Link>
+              <div>
+                <Link
+                  href={srv.href}
+                  className="font-mono text-xs font-black uppercase tracking-wider text-brand-gold hover:underline inline-flex items-center gap-2 bg-brand-gold/10 px-4 py-2 border border-brand-gold/30 group-hover:bg-brand-gold group-hover:text-brand-black transition-all"
+                >
+                  Learn More →
+                </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -11,18 +11,24 @@ export function CtaSection({
   subheading = "Book a free 30-minute strategy call. We'll map out exactly what AI marketing can do for your business — no fluff, no hard sell.",
 }: CtaSectionProps) {
   return (
-    <section className="bg-brand-gold/5 border-y border-brand-gold/10 py-20 px-4">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-white mb-4">
+    <section className="bg-brand-black border-y-2 border-brand-gold/40 py-24 px-4 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="max-w-4xl mx-auto text-center relative z-10 border-2 border-brand-gold/30 bg-brand-gray/30 p-12 sm:p-16">
+        <span className="inline-block text-[10px] font-mono font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 mb-6 border border-brand-gold/30">
+          // CONVERSION ENGINE
+        </span>
+        <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-white uppercase tracking-tight mb-6">
           {heading}
         </h2>
-        <p className="text-brand-white/60 text-lg mb-8">{subheading}</p>
+        <p className="font-mono text-brand-white/70 text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+          {subheading}
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3.5 bg-brand-gold text-brand-black font-semibold rounded-full hover:bg-brand-gold-light transition-colors text-sm"
+            className="px-8 py-4 bg-brand-gold text-brand-black font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-gold-light transition-all shadow-[4px_4px_0px_0px_rgba(245,245,245,0.2)] hover:translate-x-0.5 hover:translate-y-0.5"
           >
             Book Your Strategy Call
           </a>
@@ -30,7 +36,7 @@ export function CtaSection({
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3.5 border border-brand-gold/40 text-brand-gold font-semibold rounded-full hover:bg-brand-gold/10 transition-colors text-sm"
+            className="px-8 py-4 border-2 border-brand-gold/60 text-brand-gold font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-gold/10 transition-all"
           >
             Chat on WhatsApp
           </a>
@@ -49,15 +55,15 @@ interface PageHeroProps {
 
 export function PageHero({ title, subtitle, badge, breadcrumbs }: PageHeroProps) {
   return (
-    <section className="pt-28 pb-16 px-4 bg-brand-black border-b border-brand-gold/10">
-      <div className="max-w-4xl mx-auto">
+    <section className="pt-36 pb-20 px-4 bg-brand-black border-b-2 border-brand-gold/40 relative overflow-hidden">
+      <div className="max-w-5xl mx-auto relative z-10">
         {breadcrumbs && breadcrumbs.length > 0 && (
-          <nav className="flex items-center gap-2 text-xs text-brand-white/40 mb-6" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-brand-gold transition-colors">Home</Link>
+          <nav className="flex items-center gap-2 font-mono text-xs text-brand-white/50 mb-8" aria-label="Breadcrumb">
+            <Link href="/" className="hover:text-brand-gold transition-colors">HOME</Link>
             {breadcrumbs.map((crumb) => (
               <span key={crumb.href} className="flex items-center gap-2">
                 <span>/</span>
-                <Link href={crumb.href} className="hover:text-brand-gold transition-colors">
+                <Link href={crumb.href} className="hover:text-brand-gold transition-colors uppercase">
                   {crumb.label}
                 </Link>
               </span>
@@ -65,15 +71,17 @@ export function PageHero({ title, subtitle, badge, breadcrumbs }: PageHeroProps)
           </nav>
         )}
         {badge && (
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-brand-gold border border-brand-gold/30 rounded-full px-3 py-1 mb-4">
-            {badge}
+          <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 border-2 border-brand-gold/40 px-4 py-1.5 mb-6">
+            // {badge}
           </span>
         )}
-        <h1 className="font-display text-4xl sm:text-5xl font-bold text-brand-white leading-tight mb-4">
+        <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-brand-white uppercase tracking-tighter leading-none mb-6">
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg text-brand-white/60 max-w-2xl">{subtitle}</p>
+          <p className="font-mono text-lg text-brand-white/70 max-w-3xl leading-relaxed">
+            {subtitle}
+          </p>
         )}
       </div>
     </section>
@@ -83,10 +91,10 @@ export function PageHero({ title, subtitle, badge, breadcrumbs }: PageHeroProps)
 /** Placeholder card for client logos — to be filled with real approved logos */
 export function ClientLogoPlaceholder({ label }: { label: string }) {
   return (
-    <div className="border border-brand-gold/10 rounded-lg px-6 py-4 flex items-center justify-center">
-      <span className="text-xs text-brand-white/30 italic">
+    <div className="border-2 border-brand-gold/20 bg-brand-black p-6 flex items-center justify-center hover:border-brand-gold/60 transition-colors">
+      <span className="font-mono text-xs text-brand-white/40 uppercase tracking-wider text-center">
         {/* TODO: replace with actual client logo */}
-        [Logo: {label}]
+        [LOGO: {label}]
       </span>
     </div>
   );
@@ -95,14 +103,23 @@ export function ClientLogoPlaceholder({ label }: { label: string }) {
 /** Placeholder for case study cards — to be filled with real approved content */
 export function CaseStudyPlaceholder({ industry }: { industry: string }) {
   return (
-    <div className="border border-dashed border-brand-gold/20 rounded-xl p-6 bg-brand-gray/50">
-      <span className="text-xs font-semibold text-brand-gold uppercase tracking-wider">
-        {industry}
-      </span>
-      {/* TODO: replace with real approved case study content */}
-      <p className="text-brand-white/30 text-sm mt-2 italic">
-        Case study coming soon — real results to be added here.
-      </p>
+    <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 flex flex-col justify-between hover:border-brand-gold transition-colors">
+      <div>
+        <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-1 border border-brand-gold/30">
+          // PORTFOLIO SLOT
+        </span>
+        <h3 className="font-display text-xl font-black text-brand-white uppercase mt-4 mb-2">
+          {industry}
+        </h3>
+        {/* TODO: replace with real approved case study content */}
+        <p className="font-mono text-brand-white/40 text-xs mt-3 leading-relaxed">
+          Case study coming soon — real results and metrics to be added here.
+        </p>
+      </div>
+      <div className="mt-8 pt-4 border-t border-brand-white/10 flex items-center justify-between">
+        <span className="font-mono text-[10px] text-brand-gold uppercase">Status: Pending Verification</span>
+        <span className="font-mono text-xs font-bold text-brand-white">GDS ARCHIVE</span>
+      </div>
     </div>
   );
 }
@@ -110,11 +127,15 @@ export function CaseStudyPlaceholder({ industry }: { industry: string }) {
 /** Placeholder for testimonials — real approved quotes only */
 export function TestimonialPlaceholder() {
   return (
-    <div className="border border-dashed border-brand-gold/20 rounded-xl p-6 bg-brand-gray/50">
+    <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 flex flex-col justify-between">
       {/* TODO: replace with real approved testimonial quote, name, business name, city */}
-      <p className="text-brand-white/30 text-sm italic">
+      <p className="font-mono text-brand-white/70 text-sm italic leading-relaxed mb-6">
         &quot;[Real client testimonial to be added here — name, business name, city]&quot;
       </p>
+      <div className="pt-4 border-t border-brand-white/10 flex items-center justify-between">
+        <span className="font-mono text-[10px] font-bold text-brand-gold uppercase">Verified Client</span>
+        <span className="font-mono text-[10px] text-brand-white/40">GDS MEDIA MSME</span>
+      </div>
     </div>
   );
 }

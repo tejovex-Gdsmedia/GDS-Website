@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { useState } from "react";
 import { CALENDLY_URL, WHATSAPP_URL } from "@/lib/routes";
@@ -41,60 +40,60 @@ export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur-sm border-b border-brand-gold/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur-md border-b-2 border-brand-gold/30">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 group">
             {/* TODO: replace with actual GDS Media logo image */}
-            <span className="font-display font-bold text-xl text-brand-gold tracking-tight">
-              GDS<span className="text-brand-white"> Media</span>
+            <span className="font-display font-black text-2xl text-brand-gold tracking-tighter uppercase">
+              GDS<span className="text-brand-white group-hover:text-brand-gold transition-colors"> Media</span>
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
             {NAV_LINKS.map((link) =>
               link.children ? (
-                <div key={link.href} className="relative group">
+                <div key={link.href} className="relative group py-6">
                   <button
-                    className="text-sm text-brand-white/80 hover:text-brand-gold transition-colors flex items-center gap-1"
+                    className="text-xs uppercase font-mono font-bold tracking-widest text-brand-white/90 hover:text-brand-gold transition-colors flex items-center gap-1.5 group"
                     aria-haspopup="true"
                   >
                     {link.label}
-                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg className="w-3 h-3 transition-transform group-hover:rotate-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
                   {/* Dropdown */}
-                  <div className="absolute top-full left-0 mt-2 w-72 bg-brand-gray border border-brand-gold/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="p-4 grid gap-1">
-                      {["Blueprint", "Studio", "Growth Engine"].map((group) => (
-                        <div key={group}>
-                          <p className="text-xs font-semibold text-brand-gold uppercase tracking-wider px-2 pt-2 pb-1">
-                            {group}
-                          </p>
+                  <div className="absolute top-full left-0 w-80 bg-brand-black border-2 border-brand-gold/40 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 grid gap-3">
+                    {["Blueprint", "Studio", "Growth Engine"].map((group) => (
+                      <div key={group} className="border-b border-brand-white/10 pb-2 last:border-0 last:pb-0">
+                        <p className="text-[10px] font-mono font-black text-brand-gold uppercase tracking-widest px-2 py-1 bg-brand-gold/10">
+                          // {group}
+                        </p>
+                        <div className="grid gap-1 mt-1">
                           {link.children!
                             .filter((c) => c.group === group)
                             .map((child) => (
                               <Link
                                 key={child.href}
                                 href={child.href}
-                                className="block px-2 py-1.5 text-sm text-brand-white/70 hover:text-brand-gold hover:bg-brand-gold/5 rounded transition-colors"
+                                className="block px-2 py-1 text-xs text-brand-white/80 hover:text-brand-gold hover:bg-brand-gold/10 transition-colors font-mono"
                               >
                                 {child.label}
                               </Link>
                             ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ) : (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-brand-white/80 hover:text-brand-gold transition-colors"
+                  className="text-xs uppercase font-mono font-bold tracking-widest text-brand-white/90 hover:text-brand-gold transition-colors py-6"
                 >
                   {link.label}
                 </Link>
@@ -103,37 +102,41 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm px-4 py-2 border border-brand-gold/30 text-brand-gold rounded-full hover:bg-brand-gold/10 transition-colors"
-            >
-              WhatsApp
-            </a>
-            <a
-              href={CALENDLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm px-4 py-2 bg-brand-gold text-brand-black font-semibold rounded-full hover:bg-brand-gold-light transition-colors"
-            >
-              Book Strategy Call
-            </a>
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="group">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 border-2 border-brand-gold/60 text-brand-gold font-bold hover:bg-brand-gold/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
+              >
+                WhatsApp
+              </a>
+            </div>
+            <div className="group">
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 bg-brand-gold text-brand-black font-extrabold hover:bg-brand-gold-light transition-all shadow-[4px_4px_0px_0px_rgba(245,245,245,0.2)] hover:translate-x-0.5 hover:translate-y-0.5 group-hover:scale-105"
+              >
+                Book Strategy Call
+              </a>
+            </div>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-brand-white"
+            className="lg:hidden p-3 border-2 border-brand-gold/40 text-brand-gold bg-brand-black"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 6h16M4 12h16M4 18h16" />
               )}
             </svg>
           </button>
@@ -142,24 +145,25 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-brand-gray border-t border-brand-gold/10">
-          <nav className="px-4 py-4 flex flex-col gap-2" aria-label="Mobile navigation">
+        <div className="lg:hidden bg-brand-black border-t-2 border-brand-gold/40 max-h-[85vh] overflow-y-auto">
+          <nav className="px-6 py-6 flex flex-col gap-3" aria-label="Mobile navigation">
             {NAV_LINKS.map((link) =>
               link.children ? (
-                <div key={link.href}>
+                <div key={link.href} className="border-b border-brand-white/10 pb-3">
                   <button
-                    className="w-full text-left text-sm font-semibold text-brand-gold py-2"
+                    className="w-full text-left text-sm font-mono font-bold text-brand-gold uppercase tracking-wider py-2 flex items-center justify-between"
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    <span>{servicesOpen ? "[-]" : "[+]"}</span>
                   </button>
                   {servicesOpen && (
-                    <div className="pl-4 flex flex-col gap-1">
+                    <div className="pl-4 flex flex-col gap-2 mt-2 border-l-2 border-brand-gold/30">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="text-sm text-brand-white/70 py-1.5 hover:text-brand-gold transition-colors"
+                          className="text-xs font-mono text-brand-white/80 py-1 hover:text-brand-gold transition-colors"
                           onClick={() => setMenuOpen(false)}
                         >
                           {child.label}
@@ -172,30 +176,34 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-brand-white/80 py-2 hover:text-brand-gold transition-colors"
+                  className="text-sm font-mono font-bold text-brand-white uppercase tracking-wider py-2 border-b border-brand-white/10 hover:text-brand-gold transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               )
             )}
-            <div className="pt-4 flex flex-col gap-2">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-center text-sm px-4 py-2.5 border border-brand-gold/30 text-brand-gold rounded-full"
-              >
-                WhatsApp Us
-              </a>
-              <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-center text-sm px-4 py-2.5 bg-brand-gold text-brand-black font-semibold rounded-full"
-              >
-                Book Strategy Call
-              </a>
+            <div className="pt-6 flex flex-col gap-3">
+              <div className="group">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center text-xs font-mono uppercase font-bold px-4 py-3 border-2 border-brand-gold/60 text-brand-gold hover:bg-brand-gold/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
+                >
+                  WhatsApp Us
+                </a>
+              </div>
+              <div className="group">
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center text-xs font-mono font-extrabold px-4 py-3 bg-brand-gold text-brand-black hover:bg-brand-gold-light transition-colors group-hover:scale-105"
+                >
+                  Book Strategy Call
+                </a>
+              </div>
             </div>
           </nav>
         </div>
