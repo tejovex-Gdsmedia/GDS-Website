@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/metadata";
 import { PageHero, CtaSection } from "@/components/ui/shared";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import Revealable from "@/components/animations/Revealable";
 
 const routeConfig = getRoute("/faq")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
@@ -19,17 +20,21 @@ export default function Page() {
   return (
     <div>
       <JsonLd data={[breadcrumbSchema([{ name: "Home", href: "/" }, { name: "FAQ", href: routeConfig.path }]), faqSchema(FAQS)]} />
-      <PageHero title="Frequently Asked Questions" subtitle="Everything you need to know about working with GDS Media and our AI-powered marketing services." badge="FAQ" breadcrumbs={[{ label: "FAQ", href: routeConfig.path }]} />
-      <section className="py-24 px-4 max-w-4xl mx-auto">
+      <Revealable>
+        <PageHero title="Frequently Asked Questions" subtitle="Everything you need to know about working with GDS Media and our AI-powered marketing services." badge="FAQ" breadcrumbs={[{ label: "FAQ", href: routeConfig.path }]}   videoSrc="/videos/about-hero.mp4" />
+      </Revealable>
+      <Revealable>
+        <section className="py-24 px-4 max-w-4xl mx-auto">
         <div className="space-y-6">
           {FAQS.map((faq, i) => (
-            <div key={i} className="bg-brand-gray border border-brand-gold/10 p-6 rounded-xl">
-              <h2 className="font-display text-lg font-bold text-brand-white mb-2">{faq.question}</h2>
-              <p className="text-brand-white/70 text-sm leading-relaxed">{faq.answer}</p>
+            <div key={i} className="bg-brand-surface border border-brand-blue/10 p-6 rounded-xl">
+              <h2 className="font-display text-lg font-bold text-brand-ink mb-2">{faq.question}</h2>
+              <p className="text-brand-ink/70 text-sm leading-relaxed">{faq.answer}</p>
             </div>
           ))}
         </div>
       </section>
+      </Revealable>
       <CtaSection />
     </div>
   );

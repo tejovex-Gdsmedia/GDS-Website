@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, BRAND_NAME } from "@/lib/routes";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,11 +36,8 @@ export const metadata: Metadata = {
   },
   description:
     "GDS Media helps Indian businesses grow with AI-powered ads, videos, WhatsApp automation, and performance marketing.",
-  icons: {
-    // TODO: replace with actual GDS Media brand favicon
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  // Favicon / apple touch icon are served automatically by Next.js from
+  // app/icon.png and app/apple-icon.png — no manual `icons` entry needed.
 };
 
 export default function RootLayout({
@@ -52,7 +50,8 @@ export default function RootLayout({
       <head>
         <JsonLd data={organizationSchema()} />
       </head>
-      <body className="font-sans bg-brand-black text-brand-white min-h-screen flex flex-col">
+      <body className="font-sans bg-brand-bg text-brand-ink min-h-screen flex flex-col">
+        <SmoothScroll />
         <Header />
         <main className="flex-1 pt-16">{children}</main>
         <Footer />

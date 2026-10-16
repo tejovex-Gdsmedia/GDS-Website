@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { CALENDLY_URL, WHATSAPP_URL } from "@/lib/routes";
 
@@ -40,14 +41,21 @@ export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/95 backdrop-blur-md border-b-2 border-brand-gold/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-bg/95 backdrop-blur-md border-b-2 border-brand-blue/30">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0 group">
-            {/* TODO: replace with actual GDS Media logo image */}
-            <span className="font-display font-black text-2xl text-brand-gold tracking-tighter uppercase">
-              GDS<span className="text-brand-white group-hover:text-brand-gold transition-colors"> Media</span>
+          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0 group">
+            <Image
+              src="/images/gds-logo-mark.png"
+              alt="GDS Media logo"
+              width={36}
+              height={36}
+              priority
+              className="h-9 w-9 object-contain"
+            />
+            <span className="font-display font-black text-xl text-brand-ink tracking-tighter uppercase group-hover:text-brand-blue transition-colors">
+              GDS Media
             </span>
           </Link>
 
@@ -57,7 +65,7 @@ export function Header() {
               link.children ? (
                 <div key={link.href} className="relative group py-6">
                   <button
-                    className="text-xs uppercase font-mono font-bold tracking-widest text-brand-white/90 hover:text-brand-gold transition-colors flex items-center gap-1.5 group"
+                    className="text-xs uppercase font-mono font-bold tracking-widest text-brand-ink/90 hover:text-brand-blue transition-colors flex items-center gap-1.5 group"
                     aria-haspopup="true"
                   >
                     {link.label}
@@ -66,10 +74,10 @@ export function Header() {
                     </svg>
                   </button>
                   {/* Dropdown */}
-                  <div className="absolute top-full left-0 w-80 bg-brand-black border-2 border-brand-gold/40 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 grid gap-3">
+                  <div className="absolute top-full left-0 w-80 bg-brand-bg border-2 border-brand-blue/40 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 grid gap-3">
                     {["Blueprint", "Studio", "Growth Engine"].map((group) => (
-                      <div key={group} className="border-b border-brand-white/10 pb-2 last:border-0 last:pb-0">
-                        <p className="text-[10px] font-mono font-black text-brand-gold uppercase tracking-widest px-2 py-1 bg-brand-gold/10">
+                      <div key={group} className="border-b border-brand-ink/10 pb-2 last:border-0 last:pb-0">
+                        <p className="text-[10px] font-mono font-black text-brand-blue uppercase tracking-widest px-2 py-1 bg-brand-blue/10">
                           // {group}
                         </p>
                         <div className="grid gap-1 mt-1">
@@ -79,7 +87,7 @@ export function Header() {
                               <Link
                                 key={child.href}
                                 href={child.href}
-                                className="block px-2 py-1 text-xs text-brand-white/80 hover:text-brand-gold hover:bg-brand-gold/10 transition-colors font-mono"
+                                className="block px-2 py-1 text-xs text-brand-ink/80 hover:text-brand-blue hover:bg-brand-blue/10 transition-colors font-mono"
                               >
                                 {child.label}
                               </Link>
@@ -93,7 +101,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs uppercase font-mono font-bold tracking-widest text-brand-white/90 hover:text-brand-gold transition-colors py-6"
+                  className="text-xs uppercase font-mono font-bold tracking-widest text-brand-ink/90 hover:text-brand-blue transition-colors py-6"
                 >
                   {link.label}
                 </Link>
@@ -108,7 +116,7 @@ export function Header() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 border-2 border-brand-gold/60 text-brand-gold font-bold hover:bg-brand-gold/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
+                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 border-2 border-brand-green/60 text-brand-green font-bold hover:bg-brand-green/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
               >
                 WhatsApp
               </a>
@@ -118,7 +126,7 @@ export function Header() {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 bg-brand-gold text-brand-black font-extrabold hover:bg-brand-gold-light transition-all shadow-[4px_4px_0px_0px_rgba(245,245,245,0.2)] hover:translate-x-0.5 hover:translate-y-0.5 group-hover:scale-105"
+                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 bg-brand-orange text-brand-ink font-extrabold hover:bg-brand-orange-vivid transition-all shadow-[4px_4px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5 group-hover:scale-105"
               >
                 Book Strategy Call
               </a>
@@ -127,7 +135,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-3 border-2 border-brand-gold/40 text-brand-gold bg-brand-black"
+            className="lg:hidden p-3 border-2 border-brand-blue/40 text-brand-blue bg-brand-bg"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -145,25 +153,25 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-brand-black border-t-2 border-brand-gold/40 max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden bg-brand-bg border-t-2 border-brand-blue/40 max-h-[85vh] overflow-y-auto">
           <nav className="px-6 py-6 flex flex-col gap-3" aria-label="Mobile navigation">
             {NAV_LINKS.map((link) =>
               link.children ? (
-                <div key={link.href} className="border-b border-brand-white/10 pb-3">
+                <div key={link.href} className="border-b border-brand-ink/10 pb-3">
                   <button
-                    className="w-full text-left text-sm font-mono font-bold text-brand-gold uppercase tracking-wider py-2 flex items-center justify-between"
+                    className="w-full text-left text-sm font-mono font-bold text-brand-blue uppercase tracking-wider py-2 flex items-center justify-between"
                     onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     <span>{link.label}</span>
                     <span>{servicesOpen ? "[-]" : "[+]"}</span>
                   </button>
                   {servicesOpen && (
-                    <div className="pl-4 flex flex-col gap-2 mt-2 border-l-2 border-brand-gold/30">
+                    <div className="pl-4 flex flex-col gap-2 mt-2 border-l-2 border-brand-blue/30">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="text-xs font-mono text-brand-white/80 py-1 hover:text-brand-gold transition-colors"
+                          className="text-xs font-mono text-brand-ink/80 py-1 hover:text-brand-blue transition-colors"
                           onClick={() => setMenuOpen(false)}
                         >
                           {child.label}
@@ -176,7 +184,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-mono font-bold text-brand-white uppercase tracking-wider py-2 border-b border-brand-white/10 hover:text-brand-gold transition-colors"
+                  className="text-sm font-mono font-bold text-brand-ink uppercase tracking-wider py-2 border-b border-brand-ink/10 hover:text-brand-blue transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
@@ -189,7 +197,7 @@ export function Header() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-center text-xs font-mono uppercase font-bold px-4 py-3 border-2 border-brand-gold/60 text-brand-gold hover:bg-brand-gold/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
+                  className="text-center text-xs font-mono uppercase font-bold px-4 py-3 border-2 border-brand-green/60 text-brand-green hover:bg-brand-green/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
                 >
                   WhatsApp Us
                 </a>
@@ -199,7 +207,7 @@ export function Header() {
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-center text-xs font-mono font-extrabold px-4 py-3 bg-brand-gold text-brand-black hover:bg-brand-gold-light transition-colors group-hover:scale-105"
+                  className="text-center text-xs font-mono font-extrabold px-4 py-3 bg-brand-orange text-brand-ink hover:bg-brand-orange-vivid transition-colors group-hover:scale-105"
                 >
                   Book Strategy Call
                 </a>

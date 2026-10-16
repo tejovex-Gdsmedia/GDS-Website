@@ -12,8 +12,8 @@ export default function NeuralHero() {
     let pts: Pt[] = [];
     let animId: number;
     const mouse = { x: -999, y: -999 };
-    const GOLD = "rgba(201,150,58,";
-    const WHITE = "rgba(255,255,255,";
+    const BLUE = "rgba(0,141,187,";
+    const INK = "rgba(23,43,77,";
 
     function resize() {
       if (!canvas) return;
@@ -53,11 +53,11 @@ export default function NeuralHero() {
         cx.beginPath();
         cx.arc(this.x, this.y, r, 0, Math.PI * 2);
         if (this.gold) {
-          cx.shadowColor = "#C9963A"; cx.shadowBlur = 10;
-          cx.fillStyle = `${GOLD}${a})`;
+          cx.shadowColor = "#008DBB"; cx.shadowBlur = 10;
+          cx.fillStyle = `${BLUE}${a})`;
         } else {
           cx.shadowBlur = 0;
-          cx.fillStyle = `${WHITE}${a * 0.4})`;
+          cx.fillStyle = `${INK}${a * 0.4})`;
         }
         cx.fill();
         cx.shadowBlur = 0;
@@ -73,7 +73,7 @@ export default function NeuralHero() {
             const a = (1 - d / MAX) * 0.22;
             const g = pts[i].gold || pts[j].gold;
             cx.beginPath();
-            cx.strokeStyle = g ? `${GOLD}${a})` : `${WHITE}${a * 0.35})`;
+            cx.strokeStyle = g ? `${BLUE}${a})` : `${INK}${a * 0.35})`;
             cx.lineWidth = g ? 0.9 : 0.4;
             cx.moveTo(pts[i].x, pts[i].y); cx.lineTo(pts[j].x, pts[j].y);
             cx.stroke();
@@ -83,7 +83,7 @@ export default function NeuralHero() {
         if (md < 200) {
           const a = (1 - md / 200) * 0.65;
           cx.beginPath();
-          cx.strokeStyle = `${GOLD}${a})`;
+          cx.strokeStyle = `${BLUE}${a})`;
           cx.lineWidth = 1.1;
           cx.moveTo(pts[i].x, pts[i].y); cx.lineTo(mouse.x, mouse.y);
           cx.stroke();
@@ -132,10 +132,10 @@ export default function NeuralHero() {
       <div style={{ position:"fixed", inset:0, zIndex:1, pointerEvents:"none", background:"repeating-linear-gradient(0deg,transparent 0px,transparent 3px,rgba(0,0,0,0.08) 3px,rgba(0,0,0,0.08) 4px)" }} />
 
       {/* Corner markers */}
-      <div style={cornerStyle({ top:20, left:20 }, { borderTop:"1.5px solid #C9963A", borderLeft:"1.5px solid #C9963A" })} />
-      <div style={cornerStyle({ top:20, right:20 }, { borderTop:"1.5px solid #C9963A", borderRight:"1.5px solid #C9963A" })} />
-      <div style={cornerStyle({ bottom:20, left:20 }, { borderBottom:"1.5px solid #C9963A", borderLeft:"1.5px solid #C9963A" })} />
-      <div style={cornerStyle({ bottom:20, right:20 }, { borderBottom:"1.5px solid #C9963A", borderRight:"1.5px solid #C9963A" })} />
+      <div style={cornerStyle({ top:20, left:20 }, { borderTop:"1.5px solid #008DBB", borderLeft:"1.5px solid #008DBB" })} />
+      <div style={cornerStyle({ top:20, right:20 }, { borderTop:"1.5px solid #008DBB", borderRight:"1.5px solid #008DBB" })} />
+      <div style={cornerStyle({ bottom:20, left:20 }, { borderBottom:"1.5px solid #008DBB", borderLeft:"1.5px solid #008DBB" })} />
+      <div style={cornerStyle({ bottom:20, right:20 }, { borderBottom:"1.5px solid #008DBB", borderRight:"1.5px solid #008DBB" })} />
 
       {/* Orbit rings */}
       <div style={{ position:"fixed", top:"50%", left:"50%", transform:"translate(-50%,-50%)", zIndex:2, pointerEvents:"none" }}>
@@ -144,8 +144,8 @@ export default function NeuralHero() {
           { size:560, dur:"36s", dir:"reverse" },
           { size:720, dur:"52s", dir:"normal" },
         ] as const).map((ring, i) => (
-          <div key={i} style={{ position:"absolute", top:"50%", left:"50%", width:ring.size, height:ring.size, transform:"translate(-50%,-50%)", borderRadius:"50%", border:"1px solid rgba(201,150,58,0.07)", animation:`neuralSpin ${ring.dur} linear infinite ${ring.dir}` }}>
-            <div style={{ position:"absolute", width:5, height:5, borderRadius:"50%", background:"#C9963A", top:-2.5, left:"50%", transform:"translateX(-50%)", boxShadow:"0 0 10px #C9963A,0 0 24px rgba(201,150,58,0.4)" }} />
+          <div key={i} style={{ position:"absolute", top:"50%", left:"50%", width:ring.size, height:ring.size, transform:"translate(-50%,-50%)", borderRadius:"50%", border:"1px solid rgba(0,141,187,0.07)", animation:`neuralSpin ${ring.dur} linear infinite ${ring.dir}` }}>
+            <div style={{ position:"absolute", width:5, height:5, borderRadius:"50%", background:"#008DBB", top:-2.5, left:"50%", transform:"translateX(-50%)", boxShadow:"0 0 10px #008DBB,0 0 24px rgba(0,141,187,0.4)" }} />
           </div>
         ))}
       </div>
@@ -178,20 +178,20 @@ function NeuralCard({ pos, delay, label, value, sub, barW, spark }: {
   spark?: number[];
 }) {
   return (
-    <div style={{ position:"fixed", zIndex:25, minWidth:168, background:"rgba(10,10,10,0.88)", border:"1px solid rgba(201,150,58,0.22)", backdropFilter:"blur(16px)", WebkitBackdropFilter:"blur(16px)", padding:"18px 22px", opacity:0, animation:`neuralIn 0.7s ease ${delay} forwards, neuralBob 5s ease-in-out 2.7s infinite`, ...pos }}>
-      <div style={{ fontFamily:"monospace", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"#C9963A", marginBottom:7 }}>{label}</div>
-      <div style={{ fontFamily:"sans-serif", fontSize:28, fontWeight:700, lineHeight:1, color:"#fff" }}>{value}</div>
-      <div style={{ fontFamily:"monospace", fontSize:9, color:"rgba(255,255,255,0.5)", marginTop:5 }}>{sub}</div>
+    <div style={{ position:"fixed", zIndex:25, minWidth:168, background:"rgba(255,255,255,0.88)", border:"1px solid rgba(0,141,187,0.22)", backdropFilter:"blur(16px)", WebkitBackdropFilter:"blur(16px)", padding:"18px 22px", opacity:0, animation:`neuralIn 0.7s ease ${delay} forwards, neuralBob 5s ease-in-out 2.7s infinite`, ...pos }}>
+      <div style={{ fontFamily:"monospace", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"#008DBB", marginBottom:7 }}>{label}</div>
+      <div style={{ fontFamily:"sans-serif", fontSize:28, fontWeight:700, lineHeight:1, color:"#172B4D" }}>{value}</div>
+      <div style={{ fontFamily:"monospace", fontSize:9, color:"rgba(23,43,77,0.5)", marginTop:5 }}>{sub}</div>
       {barW && (
-        <div style={{ height:2, background:"rgba(201,150,58,0.15)", marginTop:12, overflow:"hidden", position:"relative" }}>
-          <div style={{ position:"absolute", top:0, left:0, height:"100%", background:"#C9963A", animation:`neuralBar 1.6s cubic-bezier(.22,1,.36,1) 3s forwards`, width:0 } as React.CSSProperties} />
+        <div style={{ height:2, background:"rgba(0,141,187,0.15)", marginTop:12, overflow:"hidden", position:"relative" }}>
+          <div style={{ position:"absolute", top:0, left:0, height:"100%", background:"#008DBB", animation:`neuralBar 1.6s cubic-bezier(.22,1,.36,1) 3s forwards`, width:0 } as React.CSSProperties} />
           <style>{`@keyframes neuralBar { to { width: ${barW}; } }`}</style>
         </div>
       )}
       {spark && (
         <div style={{ display:"flex", alignItems:"flex-end", gap:3, height:22, marginTop:10 }}>
           {spark.map((v, i) => (
-            <div key={i} style={{ flex:1, borderRadius:1, height:`${v}%`, background: i === spark.length-1 ? "#F0C060" : "rgba(201,150,58,0.25)" }} />
+            <div key={i} style={{ flex:1, borderRadius:1, height:`${v}%`, background: i === spark.length-1 ? "#FFD21A" : "rgba(0,141,187,0.25)" }} />
           ))}
         </div>
       )}
@@ -217,7 +217,7 @@ function NeuralStream() {
       const line = document.createElement("div");
       line.textContent = LINES[idx++ % LINES.length];
       line.style.whiteSpace = "nowrap";
-      if (Math.random() > 0.75) line.style.color = "rgba(201,150,58,0.55)";
+      if (Math.random() > 0.75) line.style.color = "rgba(0,141,187,0.55)";
       el.appendChild(line);
       if (el.children.length > 22) el.removeChild(el.firstChild!);
     }, 520);
@@ -225,6 +225,6 @@ function NeuralStream() {
   }, []);
 
   return (
-    <div ref={ref} style={{ position:"fixed", right:0, top:0, bottom:0, width:180, zIndex:5, pointerEvents:"none", display:"flex", flexDirection:"column", justifyContent:"center", padding:"24px 20px", overflow:"hidden", fontFamily:"monospace", fontSize:"9.5px", lineHeight:1.9, color:"rgba(201,150,58,0.28)", maskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)", WebkitMaskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)" }} />
+    <div ref={ref} style={{ position:"fixed", right:0, top:0, bottom:0, width:180, zIndex:5, pointerEvents:"none", display:"flex", flexDirection:"column", justifyContent:"center", padding:"24px 20px", overflow:"hidden", fontFamily:"monospace", fontSize:"9.5px", lineHeight:1.9, color:"rgba(0,141,187,0.28)", maskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)", WebkitMaskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)" }} />
   );
 }

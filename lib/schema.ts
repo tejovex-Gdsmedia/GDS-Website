@@ -14,7 +14,7 @@ export function organizationSchema() {
     "@type": ["Organization", "ProfessionalService"],
     name: BRAND_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/images/gds-logo.png`, // TODO: replace with actual logo URL
+    logo: `${SITE_URL}/images/gds-logo.png`,
     telephone: `+91${PHONE}`,
     email: EMAIL,
     openingHours: BUSINESS_HOURS,

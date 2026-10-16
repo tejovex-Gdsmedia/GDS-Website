@@ -37,20 +37,20 @@ export default function HomePage() {
 
       {/* Hero Section — Asymmetric Editorial Brutalist */}
       <Revealable>
-        <section className="relative pt-40 pb-28 px-4 overflow-hidden border-b-2 border-brand-gold/40">
+        <section className="relative pt-40 pb-28 px-4 overflow-hidden border-b-2 border-brand-blue/40">
           <NeuralHero />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#121212_1px,transparent_1px),linear-gradient(to_bottom,#121212_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-8">
-                <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 border-2 border-brand-gold/40 px-4 py-1.5 mb-8">
+                <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-8">
                   // AI-Powered Digital Marketing for Indian MSMEs
                 </span>
-                <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-white leading-[0.95] tracking-tighter uppercase mb-8">
-                  Make AI Marketing Work for Your <span className="text-brand-gold underline decoration-brand-gold/50">Indian Business</span>
+                <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter uppercase mb-8">
+                  Make AI Marketing Work for Your <span className="text-brand-blue underline decoration-brand-blue/50">Indian Business</span>
                 </h1>
-                <p className="font-mono text-lg sm:text-xl text-brand-white/80 max-w-2xl mb-12 leading-relaxed">
+                <p className="font-mono text-lg sm:text-xl text-brand-ink/80 max-w-2xl mb-12 leading-relaxed">
                   Accessible, affordable, and results-driven marketing without bloated agency timelines or studio costs. Strategy first, technology second.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-5">
@@ -58,7 +58,7 @@ export default function HomePage() {
                     href={CALENDLY_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-4 bg-brand-gold text-brand-black font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-gold-light transition-all text-center shadow-[6px_6px_0px_0px_rgba(245,245,245,0.2)] hover:translate-x-0.5 hover:translate-y-0.5"
+                    className="px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all text-center shadow-[6px_6px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5"
                   >
                     Book Your Strategy Call
                   </a>
@@ -66,31 +66,31 @@ export default function HomePage() {
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-4 border-2 border-brand-gold/60 text-brand-gold font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-gold/10 transition-all text-center"
+                    className="px-8 py-4 border-2 border-brand-green/60 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all text-center"
                   >
                     Chat on WhatsApp (+91 7400168255)
                   </a>
                 </div>
               </div>
 
-              <div className="lg:col-span-4 border-2 border-brand-gold/30 bg-brand-gray/50 p-8 relative">
-                <div className="absolute -top-3 -right-3 bg-brand-gold text-brand-black font-mono font-black text-[10px] px-2 py-0.5 uppercase">
+              <div className="lg:col-span-4 border-2 border-brand-blue/30 bg-brand-surface/50 p-8 relative">
+                <div className="absolute -top-3 -right-3 bg-brand-orange text-brand-ink font-mono font-black text-[10px] px-2 py-0.5 uppercase">
                   SYSTEM ACTIVE
                 </div>
-                <p className="font-mono text-xs text-brand-gold uppercase tracking-widest mb-4">
+                <p className="font-mono text-xs text-brand-blue uppercase tracking-widest mb-4">
                   // THE GDS DIFFERENCE
                 </p>
-                <ul className="space-y-4 font-mono text-xs text-brand-white/80">
-                  <li className="flex items-start gap-2 border-b border-brand-white/10 pb-3">
-                    <span className="text-brand-gold font-bold">01</span>
+                <ul className="space-y-4 font-mono text-xs text-brand-ink/80">
+                  <li className="flex items-start gap-2 border-b border-brand-ink/10 pb-3">
+                    <span className="text-brand-blue font-bold">01</span>
                     <span>Brand Blueprint & Psychology roadmap before ad spend.</span>
                   </li>
-                  <li className="flex items-start gap-2 border-b border-brand-white/10 pb-3">
-                    <span className="text-brand-gold font-bold">02</span>
+                  <li className="flex items-start gap-2 border-b border-brand-ink/10 pb-3">
+                    <span className="text-brand-blue font-bold">02</span>
                     <span>Hollywood-grade cinematic AI ads at a fraction of cost.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">03</span>
+                    <span className="text-brand-blue font-bold">03</span>
                     <span>Instant WhatsApp replies & AI voice calling follow-up.</span>
                   </li>
                 </ul>
@@ -102,9 +102,9 @@ export default function HomePage() {
 
       {/* Client Logos Slot */}
       <Revealable>
-        <section className="py-16 border-b-2 border-brand-gold/40 bg-brand-black px-4">
+        <section className="py-16 border-b-2 border-brand-blue/40 bg-brand-bg px-4">
           <div className="max-w-7xl mx-auto">
-            <p className="font-mono text-center text-xs font-bold uppercase tracking-widest text-brand-white/50 mb-10">
+            <p className="font-mono text-center text-xs font-bold uppercase tracking-widest text-brand-ink/50 mb-10">
               // Trusted by Indian business owners across retail, healthcare, real estate & more
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -120,111 +120,120 @@ export default function HomePage() {
       {/* Three Pillars — Asymmetric Editorial Grid */}
       <Revealable>
         <section className="py-32 px-4 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b-2 border-brand-gold/30 pb-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b-2 border-brand-blue/30 pb-8">
             <div>
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
                 // FRAMEWORK ARCHITECTURE
               </span>
-              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-white uppercase tracking-tighter mt-4">
+              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4">
                 The Three Pillars of GDS Media
               </h2>
             </div>
-            <p className="font-mono text-brand-white/60 text-sm max-w-md mt-4 md:mt-0">
+            <p className="font-mono text-brand-ink/60 text-sm max-w-md mt-4 md:mt-0">
               Marketing shouldn&apos;t be a patchwork of disconnected agencies. We built a connected system from strategy to sales.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="border-2 border-brand-gold/40 bg-brand-gray/30 p-10 flex flex-col justify-between relative group hover:border-brand-gold transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
-                    PILLAR 01
-                  </span>
-                  <span className="font-mono text-xs text-brand-white/30">BLUEPRINT</span>
+            <Revealable delay={0}>
+              <div className="h-full border-2 border-brand-blue/40 bg-brand-surface/30 p-10 flex flex-col justify-between relative group hover:border-brand-blue hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 ease-out">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 border border-brand-blue/30 transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                      PILLAR 01
+                    </span>
+                    <span className="font-mono text-xs text-brand-ink/30">BLUEPRINT</span>
+                  </div>
+                  <h3 className="font-display text-3xl font-black text-brand-ink uppercase mb-4 tracking-tight">
+                    BLUEPRINT
+                  </h3>
+                  <p className="font-mono text-brand-ink/70 text-sm leading-relaxed mb-8">
+                    Strategy + Brand. We define your unique positioning, audience psychology, and messaging roadmap before spending a single rupee on ads.
+                  </p>
                 </div>
-                <h3 className="font-display text-3xl font-black text-brand-white uppercase mb-4 tracking-tight">
-                  BLUEPRINT
-                </h3>
-                <p className="font-mono text-brand-white/70 text-sm leading-relaxed mb-8">
-                  Strategy + Brand. We define your unique positioning, audience psychology, and messaging roadmap before spending a single rupee on ads.
-                </p>
+                <div>
+                  <Link
+                    href="/services/brand-strategy"
+                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
+                  >
+                    Explore Brand Strategy
+                    <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                  </Link>
+                </div>
               </div>
-              <div>
-                <Link
-                  href="/services/brand-strategy"
-                  className="font-mono text-xs font-black uppercase tracking-wider text-brand-gold hover:underline inline-flex items-center gap-2 bg-brand-gold/10 px-4 py-2 border border-brand-gold/30"
-                >
-                  Explore Brand Strategy →
-                </Link>
-              </div>
-            </div>
+            </Revealable>
 
-            <div className="border-2 border-brand-gold/40 bg-brand-gray/30 p-10 flex flex-col justify-between relative group hover:border-brand-gold transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
-                    PILLAR 02
-                  </span>
-                  <span className="font-mono text-xs text-brand-white/30">STUDIO</span>
+            <Revealable delay={120}>
+              <div className="h-full border-2 border-brand-blue/40 bg-brand-surface/30 p-10 flex flex-col justify-between relative group hover:border-brand-blue hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 ease-out">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 border border-brand-blue/30 transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                      PILLAR 02
+                    </span>
+                    <span className="font-mono text-xs text-brand-ink/30">STUDIO</span>
+                  </div>
+                  <h3 className="font-display text-3xl font-black text-brand-ink uppercase mb-4 tracking-tight">
+                    STUDIO
+                  </h3>
+                  <p className="font-mono text-brand-ink/70 text-sm leading-relaxed mb-8">
+                    AI Creative + Storytelling. Cinematic ad films, AI brand ambassadors, branded micro-dramas, jingles, and product spotlights without studio budgets.
+                  </p>
                 </div>
-                <h3 className="font-display text-3xl font-black text-brand-white uppercase mb-4 tracking-tight">
-                  STUDIO
-                </h3>
-                <p className="font-mono text-brand-white/70 text-sm leading-relaxed mb-8">
-                  AI Creative + Storytelling. Cinematic ad films, AI brand ambassadors, branded micro-dramas, jingles, and product spotlights without studio budgets.
-                </p>
+                <div>
+                  <Link
+                    href="/services"
+                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
+                  >
+                    Explore Creative Studio
+                    <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                  </Link>
+                </div>
               </div>
-              <div>
-                <Link
-                  href="/services"
-                  className="font-mono text-xs font-black uppercase tracking-wider text-brand-gold hover:underline inline-flex items-center gap-2 bg-brand-gold/10 px-4 py-2 border border-brand-gold/30"
-                >
-                  Explore Creative Studio →
-                </Link>
-              </div>
-            </div>
+            </Revealable>
 
-            <div className="border-2 border-brand-gold/40 bg-brand-gray/30 p-10 flex flex-col justify-between relative group hover:border-brand-gold transition-colors">
-              <div>
-                <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-xs font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
-                    PILLAR 03
-                  </span>
-                  <span className="font-mono text-xs text-brand-white/30">GROWTH</span>
+            <Revealable delay={240}>
+              <div className="h-full border-2 border-brand-blue/40 bg-brand-surface/30 p-10 flex flex-col justify-between relative group hover:border-brand-blue hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 ease-out">
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 border border-brand-blue/30 transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                      PILLAR 03
+                    </span>
+                    <span className="font-mono text-xs text-brand-ink/30">GROWTH</span>
+                  </div>
+                  <h3 className="font-display text-3xl font-black text-brand-ink uppercase mb-4 tracking-tight">
+                    GROWTH ENGINE
+                  </h3>
+                  <p className="font-mono text-brand-ink/70 text-sm leading-relaxed mb-8">
+                    AI Advertising + Sales Automation. Meta & Google performance marketing paired with instant WhatsApp replies and AI voice calling follow-up.
+                  </p>
                 </div>
-                <h3 className="font-display text-3xl font-black text-brand-white uppercase mb-4 tracking-tight">
-                  GROWTH ENGINE
-                </h3>
-                <p className="font-mono text-brand-white/70 text-sm leading-relaxed mb-8">
-                  AI Advertising + Sales Automation. Meta & Google performance marketing paired with instant WhatsApp replies and AI voice calling follow-up.
-                </p>
+                <div>
+                  <Link
+                    href="/ai-sales-automation"
+                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
+                  >
+                    Explore Sales Autopilot
+                    <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                  </Link>
+                </div>
               </div>
-              <div>
-                <Link
-                  href="/ai-sales-automation"
-                  className="font-mono text-xs font-black uppercase tracking-wider text-brand-gold hover:underline inline-flex items-center gap-2 bg-brand-gold/10 px-4 py-2 border border-brand-gold/30"
-                >
-                  Explore Sales Autopilot →
-                </Link>
-              </div>
-            </div>
+            </Revealable>
           </div>
         </section>
       </Revealable>
 
       {/* Comparison Section — Brutalist Table */}
       <Revealable>
-        <section className="py-32 bg-brand-black border-y-2 border-brand-gold/40 px-4">
+        <section className="py-32 bg-brand-bg border-y-2 border-brand-blue/40 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
                 // COMPARATIVE MATRIX
               </span>
-              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-white uppercase tracking-tighter mt-4 mb-6">
+              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-6">
                 Traditional Agencies vs. The GDS Lead-to-Sale Engine
               </h2>
-              <p className="font-mono text-brand-white/60 text-base">
+              <p className="font-mono text-brand-ink/60 text-base">
                 See why Indian MSMEs are switching from bloated traditional agencies to intelligent, connected growth.
               </p>
             </div>
@@ -234,7 +243,7 @@ export default function HomePage() {
                 <h3 className="font-display text-2xl font-black text-red-400 uppercase mb-8 border-b border-red-500/30 pb-4">
                   [X] Traditional Agencies
                 </h3>
-                <ul className="space-y-6 font-mono text-sm text-brand-white/80">
+                <ul className="space-y-6 font-mono text-sm text-brand-ink/80">
                   <li className="flex items-start gap-4 border-b border-red-500/10 pb-4">
                     <span className="text-red-400 font-black text-lg">✕</span>
                     <span>High production budgets and multi-week shoot schedules.</span>
@@ -254,25 +263,25 @@ export default function HomePage() {
                 </ul>
               </div>
 
-              <div className="border-2 border-brand-gold bg-brand-gold/5 p-10">
-                <h3 className="font-display text-2xl font-black text-brand-gold uppercase mb-8 border-b border-brand-gold/40 pb-4">
+              <div className="border-2 border-brand-blue bg-brand-blue/5 p-10">
+                <h3 className="font-display text-2xl font-black text-brand-blue uppercase mb-8 border-b border-brand-blue/40 pb-4">
                   [✓] GDS Lead-to-Sale Engine
                 </h3>
-                <ul className="space-y-6 font-mono text-sm text-brand-white/90">
-                  <li className="flex items-start gap-4 border-b border-brand-gold/20 pb-4">
-                    <span className="text-brand-gold font-black text-lg">✓</span>
+                <ul className="space-y-6 font-mono text-sm text-brand-ink/90">
+                  <li className="flex items-start gap-4 border-b border-brand-blue/20 pb-4">
+                    <span className="text-brand-blue font-black text-lg">✓</span>
                     <span>Cinematic AI creatives produced in days, not weeks, at a fraction of the cost.</span>
                   </li>
-                  <li className="flex items-start gap-4 border-b border-brand-gold/20 pb-4">
-                    <span className="text-brand-gold font-black text-lg">✓</span>
+                  <li className="flex items-start gap-4 border-b border-brand-blue/20 pb-4">
+                    <span className="text-brand-blue font-black text-lg">✓</span>
                     <span>Fully connected pipeline: Brand → Ad → Lead → WhatsApp → Voice Call → Sale.</span>
                   </li>
-                  <li className="flex items-start gap-4 border-b border-brand-gold/20 pb-4">
-                    <span className="text-brand-gold font-black text-lg">✓</span>
+                  <li className="flex items-start gap-4 border-b border-brand-blue/20 pb-4">
+                    <span className="text-brand-blue font-black text-lg">✓</span>
                     <span>Instant Reply Assistant responds to every lead on WhatsApp within seconds.</span>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="text-brand-gold font-black text-lg">✓</span>
+                    <span className="text-brand-blue font-black text-lg">✓</span>
                     <span>AI Voice Follow-Up Agent calls leads automatically to qualify them for your team.</span>
                   </li>
                 </ul>
@@ -285,18 +294,18 @@ export default function HomePage() {
       {/* Case Studies / Work Preview */}
       <Revealable>
         <section className="py-32 px-4 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b-2 border-brand-gold/30 pb-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b-2 border-brand-blue/30 pb-8">
             <div>
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
                 // PORTFOLIO ARCHIVE
               </span>
-              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-white uppercase tracking-tighter mt-4">
+              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4">
                 Results & Creative Work
               </h2>
             </div>
             <Link
               href="/work"
-              className="font-mono text-xs font-black uppercase tracking-wider text-brand-gold hover:underline mt-4 md:mt-0 bg-brand-gold/10 px-4 py-2 border border-brand-gold/30 inline-block"
+              className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline mt-4 md:mt-0 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30 inline-block"
             >
               View All Case Studies →
             </Link>
@@ -312,29 +321,29 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <Revealable>
-        <section className="py-32 bg-brand-black border-t-2 border-brand-gold/40 px-4">
+        <section className="py-32 bg-brand-bg border-t-2 border-brand-blue/40 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
                 // KNOWLEDGE BASE
               </span>
-              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-white uppercase tracking-tighter mt-4">
+              <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4">
                 Frequently Asked Questions
               </h2>
             </div>
 
             <div className="space-y-6">
               {HOME_FAQS.map((faq, i) => (
-                <div key={i} className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
+                <div key={i} className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs font-black text-brand-gold bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30">
+                    <span className="font-mono text-xs font-black text-brand-blue bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30">
                       Q.0{i + 1}
                     </span>
-                    <h3 className="font-display text-lg sm:text-xl font-black text-brand-white uppercase tracking-tight">
+                    <h3 className="font-display text-lg sm:text-xl font-black text-brand-ink uppercase tracking-tight">
                       {faq.question}
                     </h3>
                   </div>
-                  <p className="font-mono text-brand-white/70 text-sm leading-relaxed pl-10">
+                  <p className="font-mono text-brand-ink/70 text-sm leading-relaxed pl-10">
                     {faq.answer}
                   </p>
                 </div>

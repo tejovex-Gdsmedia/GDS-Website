@@ -42,6 +42,7 @@ export default function AboutPage() {
           subtitle="We combine AI specialists, content strategists and performance marketers to help Indian businesses compete and win."
           badge="Our Mission & Team"
           breadcrumbs={[{ label: "About", href: "/about" }]}
+          videoSrc="/videos/about-hero.mp4"
         />
       </Revealable>
 
@@ -49,34 +50,34 @@ export default function AboutPage() {
         <section className="py-32 px-4 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-28">
             <div className="md:col-span-7">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 border-2 border-brand-gold/30 inline-block mb-6">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/30 inline-block mb-6">
                 // MISSION STATEMENT
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-white uppercase tracking-tight mb-6 leading-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-ink uppercase tracking-tight mb-6 leading-tight">
                 Making AI Marketing Accessible & Affordable for Every Indian MSME
               </h2>
-              <p className="font-mono text-brand-white/70 text-sm sm:text-base leading-relaxed mb-6">
+              <p className="font-mono text-brand-ink/70 text-sm sm:text-base leading-relaxed mb-6">
                 Traditional advertising agencies are built for large enterprises with multi-crore budgets and months of production time. For most Indian business owners — in healthcare, real estate, retail, or hospitality — that model simply doesn't work.
               </p>
-              <p className="font-mono text-brand-white/70 text-sm sm:text-base leading-relaxed">
+              <p className="font-mono text-brand-ink/70 text-sm sm:text-base leading-relaxed">
                 GDS Media was founded to bridge this gap. By combining cutting-edge AI creative tools with rigorous marketing strategy and automated sales funnels, we deliver premium agency results at a fraction of traditional shoot costs.
               </p>
             </div>
-            <div className="md:col-span-5 border-2 border-brand-gold/40 bg-brand-gray/40 p-8 sm:p-10">
-              <h3 className="font-display text-xl font-black text-brand-gold uppercase tracking-wider mb-6 border-b border-brand-gold/30 pb-3">
+            <div className="md:col-span-5 border-2 border-brand-blue/40 bg-brand-surface/40 p-8 sm:p-10">
+              <h3 className="font-display text-xl font-black text-brand-blue uppercase tracking-wider mb-6 border-b border-brand-blue/30 pb-3">
                 // Core Principles
               </h3>
-              <ul className="space-y-6 font-mono text-xs sm:text-sm text-brand-white/90">
-                <li className="flex items-start gap-4 border-b border-brand-white/10 pb-4">
-                  <span className="text-brand-gold font-black text-base">1.</span>
+              <ul className="space-y-6 font-mono text-xs sm:text-sm text-brand-ink/90">
+                <li className="flex items-start gap-4 border-b border-brand-ink/10 pb-4">
+                  <span className="text-brand-blue font-black text-base">1.</span>
                   <span>Strategy before AI: Technology without positioning is just expensive noise.</span>
                 </li>
-                <li className="flex items-start gap-4 border-b border-brand-white/10 pb-4">
-                  <span className="text-brand-gold font-black text-base">2.</span>
+                <li className="flex items-start gap-4 border-b border-brand-ink/10 pb-4">
+                  <span className="text-brand-blue font-black text-base">2.</span>
                   <span>Sales don't stop at the lead: Instant WhatsApp replies and voice follow-ups close the gap.</span>
                 </li>
                 <li className="flex items-start gap-4">
-                  <span className="text-brand-gold font-black text-base">3.</span>
+                  <span className="text-brand-blue font-black text-base">3.</span>
                   <span>Radical transparency: No vanity metrics, no hidden fees, clear accountability.</span>
                 </li>
               </ul>
@@ -86,50 +87,50 @@ export default function AboutPage() {
       </Revealable>
 
       <Revealable>
-        <section className="border-t-2 border-brand-gold/40 pt-28">
+        <section className="border-t-2 border-brand-blue/40 pt-28">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+            <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
               // MULTIDISCIPLINARY EXPERTISE
             </span>
-            <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-white uppercase tracking-tighter mt-4 mb-4">
+            <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-4">
               The GDS Expertise
             </h2>
-            <p className="font-mono text-brand-white/60 text-base">
+            <p className="font-mono text-brand-ink/60 text-base">
               Our multidisciplinary team brings together deep expertise across three critical domains.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
-              <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30 mb-4 inline-block">
+            <div className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
+              <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30 mb-4 inline-block">
                 DOMAIN 01
               </span>
-              <h3 className="font-display text-xl font-black text-brand-white uppercase tracking-tight mb-3">
+              <h3 className="font-display text-xl font-black text-brand-ink uppercase tracking-tight mb-3">
                 AI Specialists
               </h3>
-              <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed">
+              <p className="font-mono text-brand-ink/70 text-xs sm:text-sm leading-relaxed">
                 Prompt engineers, generative video creators, and automation architects building bespoke workflows for your brand.
               </p>
             </div>
-            <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
-              <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30 mb-4 inline-block">
+            <div className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
+              <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30 mb-4 inline-block">
                 DOMAIN 02
               </span>
-              <h3 className="font-display text-xl font-black text-brand-white uppercase tracking-tight mb-3">
+              <h3 className="font-display text-xl font-black text-brand-ink uppercase tracking-tight mb-3">
                 Content Strategists
               </h3>
-              <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed">
+              <p className="font-mono text-brand-ink/70 text-xs sm:text-sm leading-relaxed">
                 Experienced copywriters and storytellers who understand Indian consumer psychology and regional nuances.
               </p>
             </div>
-            <div className="border-2 border-brand-gold/30 bg-brand-gray/40 p-8 hover:border-brand-gold transition-colors">
-              <span className="font-mono text-[10px] font-black text-brand-gold uppercase tracking-widest bg-brand-gold/10 px-2 py-0.5 border border-brand-gold/30 mb-4 inline-block">
+            <div className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
+              <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30 mb-4 inline-block">
                 DOMAIN 03
               </span>
-              <h3 className="font-display text-xl font-black text-brand-white uppercase tracking-tight mb-3">
+              <h3 className="font-display text-xl font-black text-brand-ink uppercase tracking-tight mb-3">
                 Performance Marketers
               </h3>
-              <p className="font-mono text-brand-white/70 text-xs sm:text-sm leading-relaxed">
+              <p className="font-mono text-brand-ink/70 text-xs sm:text-sm leading-relaxed">
                 Media buyers and funnel experts obsessed with ROAS, lead quality, and cost-per-acquisition.
               </p>
             </div>
@@ -138,16 +139,16 @@ export default function AboutPage() {
       </Revealable>
 
       <Revealable>
-        <section className="py-32 bg-brand-black border-t-2 border-brand-gold/40 px-4">
+        <section className="py-32 bg-brand-bg border-t-2 border-brand-blue/40 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 border border-brand-gold/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
                 // SOCIAL PROOF
               </span>
-              <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-white uppercase tracking-tighter mt-4 mb-4">
+              <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-4">
                 What Clients Say
               </h2>
-              <p className="font-mono text-brand-white/60 text-sm">Real feedback from business owners who work with GDS Media.</p>
+              <p className="font-mono text-brand-ink/60 text-sm">Real feedback from business owners who work with GDS Media.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <TestimonialPlaceholder />
