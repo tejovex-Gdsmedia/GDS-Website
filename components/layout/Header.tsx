@@ -11,22 +11,12 @@ const NAV_LINKS = [
     label: "Services",
     href: "/services",
     children: [
-      // BLUEPRINT
-      { group: "Blueprint", label: "Brand Blueprint", href: "/services/brand-strategy" },
-      // STUDIO
-      { group: "Studio", label: "Cinematic AI Ads", href: "/services/ai-ad-films" },
-      { group: "Studio", label: "AI Brand Ambassador", href: "/services/ai-avatars" },
-      { group: "Studio", label: "Micro-Drama Studio", href: "/services/branded-micro-dramas" },
-      { group: "Studio", label: "Jingle & Sound Lab", href: "/services/brand-music" },
-      { group: "Studio", label: "Sound & Vision Reels", href: "/services/music-videos" },
-      { group: "Studio", label: "Product Spotlight Videos", href: "/services/ai-product-explainer-videos" },
-      { group: "Studio", label: "Virtual Creator Studio", href: "/services/ai-influencer-ugc-videos" },
-      { group: "Studio", label: "Always-On Social", href: "/services/social-media-management" },
-      // GROWTH ENGINE
-      { group: "Growth Engine", label: "Meta Ads Lab", href: "/services/meta-performance-marketing" },
-      { group: "Intent Ads", label: "Intent Ads", href: "/services/google-ads" },
-      { group: "Growth Engine", label: "Instant Reply Assistant", href: "/services/ai-whatsapp-chat-assistant" },
-      { group: "Growth Engine", label: "Voice Follow-Up Agent", href: "/services/ai-calling-bot" },
+      { label: "Performance Marketing", subtitle: "Meta, Google & YouTube Ads That Convert Browsers Into Buyers", href: "/services/performance-marketing" },
+      { label: "AI & Automation", subtitle: "WhatsApp Bots, CRM Workflows & Lead Nurturing on Autopilot", href: "/services/ai-automation" },
+      { label: "SEO & Content", subtitle: "Keyword-Rich Strategies That Build Authority & Drive Organic Traffic", href: "/services/seo-content" },
+      { label: "Brand & Creative", subtitle: "Creatives That Stop the Scroll & Build Trust Instantly", href: "/services/brand-creative" },
+      { label: "Analytics & CRO", subtitle: "Track Every Click & Optimize Every Conversion Point", href: "/services/analytics-cro" },
+      { label: "WhatsApp & Social", subtitle: "Broadcast Campaigns, Drip Sequences & Community Management at Scale", href: "/services/whatsapp-social" },
     ],
   },
   { label: "Lead-to-Sale Autopilot", href: "/ai-sales-automation" },
@@ -74,26 +64,22 @@ export function Header() {
                     </svg>
                   </button>
                   {/* Dropdown */}
-                  <div className="absolute top-full left-0 w-80 bg-brand-bg border-2 border-brand-blue/40 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 grid gap-3">
-                    {["Blueprint", "Studio", "Growth Engine"].map((group) => (
-                      <div key={group} className="border-b border-brand-ink/10 pb-2 last:border-0 last:pb-0">
-                        <p className="text-[10px] font-mono font-black text-brand-blue uppercase tracking-widest px-2 py-1 bg-brand-blue/10">
-                          // {group}
-                        </p>
-                        <div className="grid gap-1 mt-1">
-                          {link.children!
-                            .filter((c) => c.group === group)
-                            .map((child) => (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                className="block px-2 py-1 text-xs text-brand-ink/80 hover:text-brand-blue hover:bg-brand-blue/10 transition-colors font-mono"
-                              >
-                                {child.label}
-                              </Link>
-                            ))}
-                        </div>
-                      </div>
+                  <div className="absolute top-full left-0 w-96 bg-brand-bg border-2 border-brand-blue/40 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 grid gap-1">
+                    {link.children!.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="block px-3 py-2.5 rounded hover:bg-brand-blue/10 transition-colors"
+                      >
+                        <span className="block text-xs font-mono font-bold text-brand-ink hover:text-brand-blue">
+                          {child.label}
+                        </span>
+                        {child.subtitle && (
+                          <span className="block text-[11px] text-brand-ink/60 mt-0.5 leading-snug">
+                            {child.subtitle}
+                          </span>
+                        )}
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -171,10 +157,13 @@ export function Header() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="text-xs font-mono text-brand-ink/80 py-1 hover:text-brand-blue transition-colors"
+                          className="py-1.5 hover:text-brand-blue transition-colors"
                           onClick={() => setMenuOpen(false)}
                         >
-                          {child.label}
+                          <span className="block text-xs font-mono font-bold text-brand-ink/80">{child.label}</span>
+                          {child.subtitle && (
+                            <span className="block text-[11px] text-brand-ink/50 mt-0.5 leading-snug">{child.subtitle}</span>
+                          )}
                         </Link>
                       ))}
                     </div>

@@ -153,7 +153,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <Link
-                    href="/services/brand-strategy"
+                    href="/services/brand-creative"
                     className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
                   >
                     Explore Brand Strategy

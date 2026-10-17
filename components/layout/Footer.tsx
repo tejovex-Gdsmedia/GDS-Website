@@ -3,15 +3,12 @@ import Image from "next/image";
 import { BRAND_NAME, PHONE, EMAIL, WHATSAPP_URL, CALENDLY_URL, SITE_URL } from "@/lib/routes";
 
 const SERVICE_LINKS = [
-  { label: "Brand Blueprint", href: "/services/brand-strategy" },
-  { label: "Cinematic AI Ads", href: "/services/ai-ad-films" },
-  { label: "AI Brand Ambassador", href: "/services/ai-avatars" },
-  { label: "Micro-Drama Studio", href: "/services/branded-micro-dramas" },
-  { label: "Always-On Social", href: "/services/social-media-management" },
-  { label: "Meta Ads Lab", href: "/services/meta-performance-marketing" },
-  { label: "Intent Ads", href: "/services/google-ads" },
-  { label: "Instant Reply Assistant", href: "/services/ai-whatsapp-chat-assistant" },
-  { label: "Voice Follow-Up Agent", href: "/services/ai-calling-bot" },
+  { label: "Performance Marketing", href: "/services/performance-marketing" },
+  { label: "AI & Automation", href: "/services/ai-automation" },
+  { label: "SEO & Content", href: "/services/seo-content" },
+  { label: "Brand & Creative", href: "/services/brand-creative" },
+  { label: "Analytics & CRO", href: "/services/analytics-cro" },
+  { label: "WhatsApp & Social", href: "/services/whatsapp-social" },
 ];
 
 const COMPANY_LINKS = [
