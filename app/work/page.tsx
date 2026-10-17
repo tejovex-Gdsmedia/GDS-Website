@@ -77,7 +77,7 @@ export default function WorkPage() {
         <div className="w-full h-[650px] border-2 border-brand-blue/40 bg-brand-bg relative shadow-2xl">
           <MagazineWrapper
             images={PORTFOLIO_IMAGES}
-            background="#0a0a0a"
+            background="#ffffff"
             pages={12}
             pageWidth={500}
             pageHeight={650}
