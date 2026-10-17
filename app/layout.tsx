@@ -49,6 +49,20 @@ export default function RootLayout({
     <html lang="en-IN" className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
       <head>
         <JsonLd data={organizationSchema()} />
+
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="4BZgFxeLCpe9j7gA5dyn6uvU0HEUsv_hUJzrlo_0W9A" />
+
+        {/* Google tag (gtag.js) - GA4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZZY50KZ09"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WZZY50KZ09');`,
+          }}
+        />
       </head>
       <body className="font-sans bg-brand-bg text-brand-ink min-h-screen flex flex-col">
         <SmoothScroll />
