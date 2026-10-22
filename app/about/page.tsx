@@ -5,6 +5,7 @@ import { PageHero, CtaSection, TestimonialPlaceholder } from "@/components/ui/sh
 import { JsonLd } from "@/components/schema/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import Revealable from "@/components/animations/Revealable";
+import { ExpertiseCard } from "@/components/about/ExpertiseCard";
 
 const routeConfig = getRoute("/about")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
@@ -101,39 +102,40 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
-              <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30 mb-4 inline-block">
-                DOMAIN 01
-              </span>
-              <h3 className="font-display text-xl font-black text-brand-ink uppercase tracking-tight mb-3">
-                AI Specialists
-              </h3>
-              <p className="font-mono text-brand-ink/70 text-xs sm:text-sm leading-relaxed">
-                Prompt engineers, generative video creators, and automation architects building bespoke workflows for your brand.
-              </p>
-            </div>
-            <div className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
-              <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30 mb-4 inline-block">
-                DOMAIN 02
-              </span>
-              <h3 className="font-display text-xl font-black text-brand-ink uppercase tracking-tight mb-3">
-                Content Strategists
-              </h3>
-              <p className="font-mono text-brand-ink/70 text-xs sm:text-sm leading-relaxed">
-                Experienced copywriters and storytellers who understand Indian consumer psychology and regional nuances.
-              </p>
-            </div>
-            <div className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
-              <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30 mb-4 inline-block">
-                DOMAIN 03
-              </span>
-              <h3 className="font-display text-xl font-black text-brand-ink uppercase tracking-tight mb-3">
-                Performance Marketers
-              </h3>
-              <p className="font-mono text-brand-ink/70 text-xs sm:text-sm leading-relaxed">
-                Media buyers and funnel experts obsessed with ROAS, lead quality, and cost-per-acquisition.
-              </p>
-            </div>
+            <ExpertiseCard
+              title="AI Specialists"
+              description="Prompt engineers, generative video creators, and automation architects building bespoke workflows for your brand."
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-full h-full">
+                  <rect x="7" y="7" width="10" height="10" rx="1.5" />
+                  <rect x="9.5" y="9.5" width="5" height="5" rx="0.5" />
+                  <path
+                    strokeLinecap="round"
+                    d="M9 3v2M12 3v2M15 3v2M9 19v2M12 19v2M15 19v2M3 9h2M3 12h2M3 15h2M19 9h2M19 12h2M19 15h2"
+                  />
+                </svg>
+              }
+            />
+            <ExpertiseCard
+              title="Content Strategists"
+              description="Experienced copywriters and storytellers who understand Indian consumer psychology and regional nuances."
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-full h-full">
+                  <path strokeLinecap="round" d="M12 20h9" />
+                  <path strokeLinejoin="round" d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z" />
+                </svg>
+              }
+            />
+            <ExpertiseCard
+              title="Performance Marketers"
+              description="Media buyers and funnel experts obsessed with ROAS, lead quality, and cost-per-acquisition."
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-full h-full">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M7 15l4-4 3 3 5-6" />
+                </svg>
+              }
+            />
           </div>
         </section>
       </Revealable>
