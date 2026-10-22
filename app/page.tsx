@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import Revealable from "@/components/animations/Revealable";
 import NeuralHero from "@/components/NeuralHero";
+import OrbitalType from "@/components/OrbitalType";
 
 const routeConfig = getRoute("/")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
@@ -73,27 +74,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-4 border-2 border-brand-blue/30 bg-brand-surface/50 p-8 relative">
-                <div className="absolute -top-3 -right-3 bg-brand-orange text-brand-ink font-mono font-black text-[10px] px-2 py-0.5 uppercase">
-                  SYSTEM ACTIVE
-                </div>
-                <p className="font-mono text-xs text-brand-blue uppercase tracking-widest mb-4">
-                  // THE GDS DIFFERENCE
-                </p>
-                <ul className="space-y-4 font-mono text-xs text-brand-ink/80">
-                  <li className="flex items-start gap-2 border-b border-brand-ink/10 pb-3">
-                    <span className="text-brand-blue font-bold">01</span>
-                    <span>Brand Blueprint & Psychology roadmap before ad spend.</span>
-                  </li>
-                  <li className="flex items-start gap-2 border-b border-brand-ink/10 pb-3">
-                    <span className="text-brand-blue font-bold">02</span>
-                    <span>Hollywood-grade cinematic AI ads at a fraction of cost.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-blue font-bold">03</span>
-                    <span>Instant WhatsApp replies & AI voice calling follow-up.</span>
-                  </li>
-                </ul>
+              <div className="lg:col-span-4 h-[420px] lg:h-[480px]">
+                <OrbitalType />
               </div>
             </div>
           </div>

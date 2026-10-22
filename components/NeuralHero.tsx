@@ -157,12 +157,6 @@ export default function NeuralHero() {
         @keyframes neuralIn   { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
       `}</style>
 
-      {/* Floating cards */}
-      <NeuralCard pos={{ top:"16%", left:"3%" }}     delay="1.5s" label="ROI Generated"  value="847%"  sub="avg client ROI increase"     barW="84%" />
-      <NeuralCard pos={{ top:"32%", right:"3%" }}    delay="1.8s" label="AI Accuracy"    value="98.7%" sub="content generation score"     spark={[35,52,41,68,55,72,61,88,70,95,82,100]} />
-      <NeuralCard pos={{ bottom:"24%", left:"3%" }}  delay="2.1s" label="WhatsApp Reply" value="<30s"  sub="avg AI response time"         barW="95%" />
-      <NeuralCard pos={{ bottom:"18%", right:"3%" }} delay="2.4s" label="Avg ROAS"       value="6.4x"  sub="across active campaigns"      spark={[28,45,38,60,50,70,56,78,65,88,75,100]} />
-
       <NeuralStream />
     </>
   );
