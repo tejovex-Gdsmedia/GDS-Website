@@ -2,7 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { getRoute, CALENDLY_URL, WHATSAPP_URL } from "@/lib/routes";
 import { buildMetadata } from "@/lib/metadata";
-import { CtaSection, ClientLogoPlaceholder, CaseStudyPlaceholder, TestimonialPlaceholder } from "@/components/ui/shared";
+import { CtaSection, CaseStudyPlaceholder, TestimonialPlaceholder } from "@/components/ui/shared";
+import { LogoMarquee } from "@/components/home/LogoMarquee";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import Revealable from "@/components/animations/Revealable";
@@ -82,19 +83,14 @@ export default function HomePage() {
         </section>
       </Revealable>
 
-      {/* Client Logos Slot */}
+      {/* Client Logos */}
       <Revealable>
         <section className="py-16 border-b-2 border-brand-blue/40 bg-brand-bg px-4">
           <div className="max-w-7xl mx-auto">
             <p className="font-mono text-center text-xs font-bold uppercase tracking-widest text-brand-ink/50 mb-10">
               // Trusted by Indian business owners across retail, healthcare, real estate & more
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              <ClientLogoPlaceholder label="Clinic & Healthcare" />
-              <ClientLogoPlaceholder label="Real Estate Developer" />
-              <ClientLogoPlaceholder label="Fashion & Retail" />
-              <ClientLogoPlaceholder label="D2C Brand" />
-            </div>
+            <LogoMarquee />
           </div>
         </section>
       </Revealable>
