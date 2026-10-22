@@ -28,13 +28,18 @@ const RING_COLOR = "rgba(0,141,187,0.35)"; // brand-blue
 const TEXT_COLOR = "#172B4D"; // brand-ink
 const ACCENT_COLOR = "#FF9810"; // brand-orange
 
-function makeTextSprite(text: string): THREE.Sprite {
+// A flat plane carrying the word's texture, later oriented to face
+// radially outward from the globe's centre (see `orientOutward` below) so
+// it reads like a flag standing on the sphere's surface and rotates with
+// it — rather than a sprite, which always billboards flat to the camera
+// regardless of the globe's rotation (the cause of the "messy" look).
+function makeTextPlane(text: string): THREE.Mesh {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d")!;
-  const fontSize = 42;
+  const fontSize = 40;
   ctx.font = `700 ${fontSize}px 'Manrope', sans-serif`;
   const metrics = ctx.measureText(text);
-  const padX = 24;
+  const padX = 20;
   canvas.width = Math.ceil(metrics.width + padX * 2);
   canvas.height = fontSize * 1.6;
 
@@ -48,11 +53,17 @@ function makeTextSprite(text: string): THREE.Sprite {
   texture.minFilter = THREE.LinearFilter;
   texture.colorSpace = THREE.SRGBColorSpace;
 
-  const material = new THREE.SpriteMaterial({ map: texture, transparent: true, depthWrite: false });
-  const sprite = new THREE.Sprite(material);
-  const scale = 0.0068;
-  sprite.scale.set(canvas.width * scale, canvas.height * scale, 1);
-  return sprite;
+  const scale = 0.0052;
+  const geometry = new THREE.PlaneGeometry(canvas.width * scale, canvas.height * scale);
+  const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, depthWrite: false });
+  return new THREE.Mesh(geometry, material);
+}
+
+// Orients a mesh already positioned on the globe so its face points
+// straight outward from the centre (and hides once rotated to the far
+// side of the sphere, since MeshBasicMaterial culls its back face).
+function orientOutward(mesh: THREE.Object3D) {
+  mesh.lookAt(0, 0, 0);
 }
 
 export default function OrbitalType({ words = DEFAULT_WORDS, className = "" }: OrbitalTypeProps) {
@@ -108,9 +119,10 @@ export default function OrbitalType({ words = DEFAULT_WORDS, className = "" }: O
       ringGroup.rotation.z = cfg.tiltZ;
       ringWords.forEach((word, i) => {
         const angle = (i / ringWords.length) * Math.PI * 2 + ringIndex * 0.6;
-        const sprite = makeTextSprite(word);
-        sprite.position.set(Math.cos(angle) * cfg.r, 0, Math.sin(angle) * cfg.r);
-        ringGroup.add(sprite);
+        const plane = makeTextPlane(word);
+        plane.position.set(Math.cos(angle) * cfg.r, 0, Math.sin(angle) * cfg.r);
+        orientOutward(plane);
+        ringGroup.add(plane);
       });
       wordGroup.add(ringGroup);
     });
