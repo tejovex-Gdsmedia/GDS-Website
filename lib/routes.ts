@@ -3,9 +3,9 @@
 
 export const SITE_URL = "https://www.gdsmedia.in";
 export const BRAND_NAME = "GDS Media";
-export const PHONE = "7400168255";
+export const PHONE = "7304920595";
 export const WHATSAPP_URL = `https://wa.me/91${PHONE}`;
-export const EMAIL = "yogeshgdsmedia@gmail.com";
+export const EMAIL = "contact@gdsmedia.in";
 export const CALENDLY_URL = "https://calendly.com/gdstejovex/ai-powered-marketing";
 export const BUSINESS_HOURS = "Mo-Sa 11:00-20:00";
 

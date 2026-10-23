@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { getRoute, CALENDLY_URL, WHATSAPP_URL } from "@/lib/routes";
+import { getRoute, CALENDLY_URL, WHATSAPP_URL, PHONE } from "@/lib/routes";
 import { buildMetadata } from "@/lib/metadata";
 import { CtaSection, CaseStudyPlaceholder, TestimonialPlaceholder } from "@/components/ui/shared";
 import { LogoMarquee } from "@/components/home/LogoMarquee";
@@ -70,7 +70,7 @@ export default function HomePage() {
                     rel="noopener noreferrer"
                     className="px-8 py-4 border-2 border-brand-green/60 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all text-center"
                   >
-                    Chat on WhatsApp (+91 7400168255)
+                    Chat on WhatsApp (+91 {PHONE})
                   </a>
                 </div>
               </div>
