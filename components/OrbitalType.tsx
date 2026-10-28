@@ -11,11 +11,9 @@ export interface OrbitalTypeProps {
 
 const DEFAULT_WORDS = [
   "PERFORMANCE MARKETING",
-  "AI & AUTOMATION",
   "SEO & CONTENT",
   "BRAND & CREATIVE",
   "ANALYTICS & CRO",
-  "WHATSAPP & SOCIAL",
   "META ADS",
   "GOOGLE ADS",
   "LEAD-TO-SALE",

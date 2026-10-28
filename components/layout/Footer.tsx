@@ -4,11 +4,9 @@ import { BRAND_NAME, PHONE, EMAIL, WHATSAPP_URL, CALENDLY_URL, SITE_URL } from "
 
 const SERVICE_LINKS = [
   { label: "Performance Marketing", href: "/services/performance-marketing" },
-  { label: "AI & Automation", href: "/services/ai-automation" },
   { label: "SEO & Content", href: "/services/seo-content" },
   { label: "Brand & Creative", href: "/services/brand-creative" },
   { label: "Analytics & CRO", href: "/services/analytics-cro" },
-  { label: "WhatsApp & Social", href: "/services/whatsapp-social" },
 ];
 
 const COMPANY_LINKS = [

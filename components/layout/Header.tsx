@@ -12,11 +12,11 @@ const NAV_LINKS = [
     href: "/services",
     children: [
       { label: "Performance Marketing", subtitle: "Meta, Google & YouTube Ads That Convert Browsers Into Buyers", href: "/services/performance-marketing" },
-      { label: "AI & Automation", subtitle: "WhatsApp Bots, CRM Workflows & Lead Nurturing on Autopilot", href: "/services/ai-automation" },
+  
       { label: "SEO & Content", subtitle: "Keyword-Rich Strategies That Build Authority & Drive Organic Traffic", href: "/services/seo-content" },
       { label: "Brand & Creative", subtitle: "Creatives That Stop the Scroll & Build Trust Instantly", href: "/services/brand-creative" },
       { label: "Analytics & CRO", subtitle: "Track Every Click & Optimize Every Conversion Point", href: "/services/analytics-cro" },
-      { label: "WhatsApp & Social", subtitle: "Broadcast Campaigns, Drip Sequences & Community Management at Scale", href: "/services/whatsapp-social" },
+
     ],
   },
   { label: "Lead-to-Sale Autopilot", href: "/ai-sales-automation" },

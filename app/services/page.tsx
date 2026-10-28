@@ -18,12 +18,6 @@ const SERVICES_LIST = [
     desc: "Meta, Google & YouTube Ads That Convert Browsers Into Buyers.",
   },
   {
-    category: "AI & Automation",
-    title: "Your Business on Autopilot — 24/7, Zero Missed Leads",
-    href: "/services/ai-automation",
-    desc: "WhatsApp Bots, CRM Workflows & Lead Nurturing on Autopilot.",
-  },
-  {
     category: "SEO & Content",
     title: "Rank Higher. Get Found. Get Clients.",
     href: "/services/seo-content",
@@ -40,12 +34,6 @@ const SERVICES_LIST = [
     title: "Data That Drives Decisions. Funnels That Convert.",
     href: "/services/analytics-cro",
     desc: "Track Every Click & Optimize Every Conversion Point.",
-  },
-  {
-    category: "WhatsApp & Social",
-    title: "India's #1 Marketing Channel — Used the Right Way",
-    href: "/services/whatsapp-social",
-    desc: "Broadcast Campaigns, Drip Sequences & Community Management at Scale.",
   },
 ];
 

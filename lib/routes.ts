@@ -57,15 +57,6 @@ export const routes: RouteConfig[] = [
     priority: 0.8,
   },
   {
-    path: "/services/ai-automation",
-    title: "AI & Automation: WhatsApp Bots & CRM Workflows India",
-    description:
-      "Put your sales pipeline on autopilot with WhatsApp AI chatbots, CRM workflows and automated lead nurturing — zero missed leads, 24/7.",
-    keyword: "AI automation agency India",
-    changeFreq: "monthly",
-    priority: 0.8,
-  },
-  {
     path: "/services/seo-content",
     title: "SEO & Content: Organic Growth for Indian Businesses",
     description:
@@ -91,15 +82,6 @@ export const routes: RouteConfig[] = [
     keyword: "conversion rate optimization agency India",
     changeFreq: "monthly",
     priority: 0.7,
-  },
-  {
-    path: "/services/whatsapp-social",
-    title: "WhatsApp & Social: Broadcast Campaigns at Scale India",
-    description:
-      "WhatsApp broadcast campaigns, drip sequences and social community management at scale — India's #1 marketing channel, used the right way.",
-    keyword: "WhatsApp marketing agency India",
-    changeFreq: "monthly",
-    priority: 0.8,
   },
   {
     path: "/ai-sales-automation",

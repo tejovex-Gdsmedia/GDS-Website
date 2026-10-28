@@ -6,7 +6,8 @@ interface PageMetaInput {
   description: string;
   path: string;
   ogImage?: string;
-}
+} 
+
 
 /**
  * Generates complete Next.js Metadata for a page.
