@@ -84,15 +84,6 @@ export const routes: RouteConfig[] = [
     priority: 0.7,
   },
   {
-    path: "/ai-sales-automation",
-    title: "Lead-to-Sale Autopilot: AI Sales Automation for India",
-    description:
-      "Connect your ads to your sales team with GDS Media's Lead-to-Sale Engine — AI WhatsApp replies, voice follow-ups and automatic lead qualification.",
-    keyword: "AI sales automation for Indian businesses",
-    changeFreq: "monthly",
-    priority: 0.9,
-  },
-  {
     path: "/work",
     title: "Our Work — AI Marketing Portfolio & Case Studies",
     description:

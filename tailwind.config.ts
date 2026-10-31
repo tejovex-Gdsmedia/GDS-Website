@@ -29,8 +29,14 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-manrope)", "system-ui", "sans-serif"],
+        // Body copy, nav, buttons, labels, cards — Work Sans.
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        // Headings — Mileast (see globals.css for the @font-face placeholder).
+        display: ["var(--font-heading)", "system-ui", "sans-serif"],
+        // This brutalist theme uses "font-mono" purely as a styling choice
+        // for UI copy (nav/buttons/labels/cards), not for real code — so it
+        // follows the body font too, per the typography update.
+        mono: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         "8xl": "88rem",

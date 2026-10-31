@@ -35,13 +35,13 @@ function makeTextPlane(text: string): THREE.Mesh {
   const canvas = document.createElement("canvas");
   const ctx = canvas.getContext("2d")!;
   const fontSize = 40;
-  ctx.font = `700 ${fontSize}px 'Manrope', sans-serif`;
+  ctx.font = `700 ${fontSize}px 'Work Sans', sans-serif`;
   const metrics = ctx.measureText(text);
   const padX = 20;
   canvas.width = Math.ceil(metrics.width + padX * 2);
   canvas.height = fontSize * 1.6;
 
-  ctx.font = `700 ${fontSize}px 'Manrope', sans-serif`;
+  ctx.font = `700 ${fontSize}px 'Work Sans', sans-serif`;
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
   ctx.fillStyle = TEXT_COLOR;

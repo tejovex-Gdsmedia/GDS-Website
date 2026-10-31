@@ -187,10 +187,10 @@ export default function HomePage() {
                 </div>
                 <div>
                   <Link
-                    href="/ai-sales-automation"
+                    href="/services/performance-marketing"
                     className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
                   >
-                    Explore Sales Autopilot
+                    Explore Growth Engine
                     <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                   </Link>
                 </div>

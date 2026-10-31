@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope, JetBrains_Mono } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,24 +8,13 @@ import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, BRAND_NAME } from "@/lib/routes";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const inter = Inter({
+// Body/subheading/UI font. Headings use "Mileast" (see globals.css for the
+// @font-face placeholder — drop the font files in public/fonts/mileast/).
+const workSans = Work_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-work-sans",
   display: "swap",
-  weight: ["400", "500", "600"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -46,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en-IN" className={workSans.variable}>
       <head>
         <JsonLd data={organizationSchema()} />
 

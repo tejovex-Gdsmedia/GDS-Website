@@ -43,7 +43,6 @@ Brand Blueprint → Story + Ad Script → Cinematic AI Ad → AI-Optimised Adver
 | Intent Ads | /services/google-ads |
 | Instant Reply Assistant | /services/ai-whatsapp-chat-assistant |
 | Voice Follow-Up Agent | /services/ai-calling-bot |
-| Lead-to-Sale Autopilot | /ai-sales-automation |
 | Work / Portfolio | /work |
 | Process | /process |
 | FAQ | /faq |
