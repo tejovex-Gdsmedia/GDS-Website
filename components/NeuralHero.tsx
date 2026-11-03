@@ -219,6 +219,8 @@ function NeuralStream() {
   }, []);
 
   return (
-    <div ref={ref} style={{ position:"fixed", right:0, top:0, bottom:0, width:180, zIndex:5, pointerEvents:"none", display:"flex", flexDirection:"column", justifyContent:"center", padding:"24px 20px", overflow:"hidden", fontFamily:"monospace", fontSize:"9.5px", lineHeight:1.9, color:"rgba(0,141,187,0.28)", maskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)", WebkitMaskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)" }} />
+    // Hidden below md: at narrow widths this fixed 180px-wide column has
+    // nowhere to go and overlaps the hero's body text (no reserved gutter).
+    <div ref={ref} className="hidden md:flex" style={{ position:"fixed", right:0, top:0, bottom:0, width:180, zIndex:5, pointerEvents:"none", flexDirection:"column", justifyContent:"center", padding:"24px 20px", overflow:"hidden", fontFamily:"monospace", fontSize:"9.5px", lineHeight:1.9, color:"rgba(0,141,187,0.28)", maskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)", WebkitMaskImage:"linear-gradient(to bottom,transparent,black 15%,black 85%,transparent)" }} />
   );
 }
