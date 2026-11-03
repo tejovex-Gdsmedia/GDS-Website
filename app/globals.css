@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-manrope: 'Manrope', system-ui, sans-serif;
+  --font-heading: var(--font-playfair-display), Georgia, serif;
+  --font-body: var(--font-work-sans), system-ui, sans-serif;
 }
 
 /* Smooth scrolling is handled by Lenis (components/SmoothScroll.tsx);

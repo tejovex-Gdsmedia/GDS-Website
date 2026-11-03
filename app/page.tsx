@@ -48,8 +48,8 @@ export default function HomePage() {
                 <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-8">
                   // AI-Powered Digital Marketing for Indian MSMEs
                 </span>
-                <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter uppercase mb-8">
-                  Make AI Marketing Work for Your <span className="text-brand-blue underline decoration-brand-blue/50">Indian Business</span>
+                <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter mb-8">
+                  Make AI Marketing Work For Your <span className="text-brand-blue underline decoration-brand-blue/50">Indian Business</span>
                 </h1>
                 <p className="font-mono text-lg sm:text-xl text-brand-ink/80 max-w-2xl mb-12 leading-relaxed">
                   Accessible, affordable, and results-driven marketing without bloated agency timelines or studio costs. Strategy first, technology second.
@@ -186,10 +186,10 @@ export default function HomePage() {
                 </div>
                 <div>
                   <Link
-                    href="/ai-sales-automation"
+                    href="/services/performance-marketing"
                     className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
                   >
-                    Explore Sales Autopilot
+                    Explore Growth Engine
                     <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                   </Link>
                 </div>

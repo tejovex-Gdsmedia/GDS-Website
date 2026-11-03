@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,24 +8,20 @@ import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE_URL, BRAND_NAME } from "@/lib/routes";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const inter = Inter({
+// Body/subheading/UI font.
+const workSans = Work_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-work-sans",
   display: "swap",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const manrope = Manrope({
+// Heading font — hero/section/page headings, large display headings, marketing headlines.
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-playfair-display",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -46,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en-IN" className={`${workSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
 

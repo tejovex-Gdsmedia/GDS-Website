@@ -19,7 +19,6 @@ const NAV_LINKS = [
 
     ],
   },
-  { label: "Lead-to-Sale Autopilot", href: "/ai-sales-automation" },
   { label: "Work", href: "/work" },
   { label: "Process", href: "/process" },
   { label: "Blog", href: "/blog" },
@@ -50,12 +49,12 @@ export function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8" aria-label="Main navigation">
             {NAV_LINKS.map((link) =>
               link.children ? (
                 <div key={link.href} className="relative group py-6">
                   <button
-                    className="text-xs uppercase font-mono font-bold tracking-widest text-brand-ink/90 hover:text-brand-blue transition-colors flex items-center gap-1.5 group"
+                    className="text-xs uppercase font-mono font-bold tracking-widest text-brand-ink/90 hover:text-brand-blue transition-colors flex items-center gap-1.5 group whitespace-nowrap"
                     aria-haspopup="true"
                   >
                     {link.label}
@@ -87,7 +86,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs uppercase font-mono font-bold tracking-widest text-brand-ink/90 hover:text-brand-blue transition-colors py-6"
+                  className="text-xs uppercase font-mono font-bold tracking-widest text-brand-ink/90 hover:text-brand-blue transition-colors py-6 whitespace-nowrap"
                 >
                   {link.label}
                 </Link>
@@ -96,13 +95,13 @@ export function Header() {
           </nav>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4">
             <div className="group">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 border-2 border-brand-green/60 text-brand-green font-bold hover:bg-brand-green/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
+                className="text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 border-2 border-brand-green/60 text-brand-green font-bold hover:bg-brand-green/10 transition-all group-hover:translate-x-1 group-hover:scale-105 whitespace-nowrap"
               >
                 WhatsApp
               </a>
@@ -112,7 +111,7 @@ export function Header() {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono uppercase tracking-wider px-5 py-2.5 bg-brand-orange text-brand-ink font-extrabold hover:bg-brand-orange-vivid transition-all shadow-[4px_4px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5 group-hover:scale-105"
+                className="text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 bg-brand-orange text-brand-ink font-extrabold hover:bg-brand-orange-vivid transition-all shadow-[4px_4px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5 group-hover:scale-105 whitespace-nowrap"
               >
                 Book Strategy Call
               </a>
