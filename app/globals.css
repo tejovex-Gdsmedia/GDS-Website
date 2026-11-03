@@ -2,24 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
- * Heading font: Mileast.
- * The font files are not yet in this project. Drop them into
- * public/fonts/mileast/ (see the README there for exact filenames) and this
- * @font-face will pick them up automatically — no other change needed.
- * Until then, --font-heading falls back to the body font below.
- */
-@font-face {
-  font-family: 'Mileast';
-  src: url('/fonts/mileast/Mileast-Variable.woff2') format('woff2'),
-       url('/fonts/mileast/Mileast-Variable.woff') format('woff');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --font-heading: 'Mileast', var(--font-work-sans), system-ui, sans-serif;
+  --font-heading: var(--font-playfair-display), Georgia, serif;
   --font-body: var(--font-work-sans), system-ui, sans-serif;
 }
 

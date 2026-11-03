@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google";
+import { Playfair_Display, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,11 +8,18 @@ import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, BRAND_NAME } from "@/lib/routes";
 import SmoothScroll from "@/components/SmoothScroll";
 
-// Body/subheading/UI font. Headings use "Mileast" (see globals.css for the
-// @font-face placeholder — drop the font files in public/fonts/mileast/).
+// Body/subheading/UI font.
 const workSans = Work_Sans({
   subsets: ["latin"],
   variable: "--font-work-sans",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+// Heading font — hero/section/page headings, large display headings, marketing headlines.
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair-display",
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
 });
@@ -35,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={workSans.variable}>
+    <html lang="en-IN" className={`${workSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <JsonLd data={organizationSchema()} />
 
