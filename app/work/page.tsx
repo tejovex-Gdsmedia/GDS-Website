@@ -13,35 +13,35 @@ export const metadata: Metadata = buildMetadata(routeConfig);
 const PORTFOLIO_IMAGES = [
   {
     image: {
-      src: "/images/Image 1.png",
+      src: "/images/healthcare-ai-ad-campaign.webp",
       alt: "Healthcare & Clinics AI Ad Campaign"
     },
     offsetY: 0
   },
   {
     image: {
-      src: "/images/Image 2.png",
+      src: "/images/real-estate-cinematic-ad.webp",
       alt: "Real Estate Development Cinematic Ad"
     },
     offsetY: 0
   },
   {
     image: {
-      src: "/images/Image 3.png",
+      src: "/images/retail-fashion-ai-brand-ambassador.webp",
       alt: "Retail & Fashion AI Brand Ambassador"
     },
     offsetY: 0
   },
   {
     image: {
-      src: "/images/Image 4.png",
+      src: "/images/hospitality-fb-micro-drama.webp",
       alt: "Hospitality & F&B Micro-Drama"
     },
     offsetY: 0
   },
   {
     image: {
-      src: "/images/Image 5.png",
+      src: "/images/education-coaching-growth-engine.webp",
       alt: "Education & Coaching Growth Engine"
     },
     offsetY: 0
