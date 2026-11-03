@@ -7,8 +7,7 @@ import { LogoMarquee } from "@/components/home/LogoMarquee";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import Revealable from "@/components/animations/Revealable";
-import NeuralHero from "@/components/NeuralHero";
-import OrbitalType from "@/components/OrbitalType";
+import { NeuralHero, OrbitalType } from "@/components/home/LazyHero";
 
 const routeConfig = getRoute("/")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
