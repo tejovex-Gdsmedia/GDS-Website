@@ -1,12 +1,15 @@
+// width/height are each logo's natural aspect ratio at the 56px (h-14)
+// display height, set as attributes (not just CSS) so the browser can
+// reserve the right box before the image loads — avoids layout shift.
 const LOGOS = [
-  { src: "/images/clients/vision-enterprises.jpg", alt: "Vision Enterprises" },
-  { src: "/images/clients/leaf-logo.jpg", alt: "Client logo" },
-  { src: "/images/clients/tp-hair-studio.png", alt: "TP's Hair Studio" },
-  { src: "/images/clients/the-watch-store.png", alt: "The Watch Store" },
-  { src: "/images/clients/tejovex-ai.png", alt: "Tejovex AI" },
-  { src: "/images/clients/facematic-global-institute.webp", alt: "Facematic Global Institute" },
-  { src: "/images/clients/brijesh-duke-surgeon.png", alt: "Brijesh Duke Surgeon" },
-  { src: "/images/clients/facematic-aesthetics.png", alt: "Facematic Aesthetics" },
+  { src: "/images/clients/vision-enterprises.jpg", alt: "Vision Enterprises", width: 56, height: 56 },
+  { src: "/images/clients/leaf-logo.jpg", alt: "Client logo", width: 56, height: 56 },
+  { src: "/images/clients/tp-hair-studio.png", alt: "TP's Hair Studio", width: 56, height: 56 },
+  { src: "/images/clients/the-watch-store.png", alt: "The Watch Store", width: 211, height: 56 },
+  { src: "/images/clients/tejovex-ai.png", alt: "Tejovex AI", width: 205, height: 56 },
+  { src: "/images/clients/facematic-global-institute.webp", alt: "Facematic Global Institute", width: 167, height: 56 },
+  { src: "/images/clients/brijesh-duke-surgeon.png", alt: "Brijesh Duke Surgeon", width: 140, height: 56 },
+  { src: "/images/clients/facematic-aesthetics.png", alt: "Facematic Aesthetics", width: 56, height: 56 },
 ];
 
 /**
@@ -25,6 +28,8 @@ export function LogoMarquee() {
             key={i}
             src={logo.src}
             alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
             draggable={false}
             loading={i < LOGOS.length ? "eager" : "lazy"}
             className="h-12 sm:h-14 w-auto object-contain mx-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"

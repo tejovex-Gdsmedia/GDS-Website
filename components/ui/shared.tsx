@@ -57,6 +57,13 @@ interface PageHeroProps {
 }
 
 export function PageHero({ title, subtitle, badge, breadcrumbs, videoSrc, videoPoster }: PageHeroProps) {
+  // Falls back to a lightweight generated placeholder (no real video frame
+  // available — ffmpeg isn't available in this environment to extract one)
+  // so there's an instant paint instead of a blank/black flash before the
+  // 13MB hero video loads. TODO: compress about-hero.mp4 and generate a
+  // real poster frame from it once ffmpeg (or similar) is available.
+  const poster = videoPoster ?? (videoSrc ? "/videos/hero-poster.jpg" : undefined);
+
   return (
     <section className="pt-36 pb-20 px-4 bg-brand-bg border-b-2 border-brand-blue/40 relative overflow-hidden">
       {videoSrc && (
@@ -66,7 +73,8 @@ export function PageHero({ title, subtitle, badge, breadcrumbs, videoSrc, videoP
             muted
             loop
             playsInline
-            poster={videoPoster}
+            preload="metadata"
+            poster={poster}
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={videoSrc} type="video/mp4" />

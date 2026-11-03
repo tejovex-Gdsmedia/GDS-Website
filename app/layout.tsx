@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/schema/JsonLd";
-import { organizationSchema } from "@/lib/schema";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE_URL, BRAND_NAME } from "@/lib/routes";
 import SmoothScroll from "@/components/SmoothScroll";
 
@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en-IN" className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <JsonLd data={organizationSchema()} />
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
 
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="4BZgFxeLCpe9j7gA5dyn6uvU0HEUsv_hUJzrlo_0W9A" />

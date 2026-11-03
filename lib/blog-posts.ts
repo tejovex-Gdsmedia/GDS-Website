@@ -30,7 +30,7 @@ export const blogPosts: Record<string, BlogPost> = {
     title: "How AI Is Transforming MSME Marketing in India",
     metaTitle: "AI Marketing for MSMEs in India: A Practical Guide",
     description:
-      "Discover how AI marketing helps Indian MSMEs with lead generation, SEO, ad campaigns and follow-ups, plus practical steps to get started.",
+      "Discover how AI marketing helps Indian MSMEs with lead generation, SEO, ad campaigns and follow-ups, plus practical steps to get started the right way.",
     date: "2026-10-13",
     keyword: "AI marketing for MSMEs in India",
     heroImage: "/images/blog/how-ai-is-transforming-msme-marketing-in-india.webp",
@@ -264,7 +264,7 @@ export const blogPosts: Record<string, BlogPost> = {
     title: "Why Leads Go Cold and How WhatsApp AI Can Help Re-Engage Them",
     metaTitle: "Why Leads Go Cold & How WhatsApp AI Helps",
     description:
-      "Learn why leads stop responding and how WhatsApp AI can support timely replies, relevant follow-ups and better lead management.",
+      "Learn why leads stop responding and how WhatsApp AI can support timely replies, relevant follow-ups and better lead management for your business.",
     date: "2026-10-10",
     keyword: "WhatsApp AI lead follow-up",
     heroImage: "/images/blog/why-leads-go-cold-and-how-whatsapp-ai-solves-it.webp",

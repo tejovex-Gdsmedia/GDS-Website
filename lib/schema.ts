@@ -33,6 +33,18 @@ export function organizationSchema() {
   };
 }
 
+// ─── WebSite ──────────────────────────────────────────────────────────────────
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: BRAND_NAME,
+    url: SITE_URL,
+    inLanguage: "en-IN",
+  };
+}
+
 // ─── BreadcrumbList ───────────────────────────────────────────────────────────
 
 export interface BreadcrumbItem {

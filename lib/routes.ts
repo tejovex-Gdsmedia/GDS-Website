@@ -42,7 +42,7 @@ export const routes: RouteConfig[] = [
     path: "/services",
     title: "AI Marketing Services for Indian Businesses — GDS Media",
     description:
-      "Explore GDS Media's full suite: AI ad films, brand strategy, Meta & Google ads, WhatsApp automation, and AI calling bots for Indian MSMEs.",
+      "Explore GDS Media's full suite of AI marketing services: performance ads, SEO & content, brand creative, and conversion optimization for Indian MSMEs.",
     keyword: "AI marketing services India",
     changeFreq: "weekly",
     priority: 0.9,
@@ -78,7 +78,7 @@ export const routes: RouteConfig[] = [
     path: "/services/analytics-cro",
     title: "Analytics & CRO: Tracking & Conversion Optimization",
     description:
-      "Track every click and optimize every drop-off point. GDS Media sets up GA4, Meta Pixel and CRO strategy that turns data into growth.",
+      "Track every click and optimize every drop-off point. GDS Media sets up GA4, Meta Pixel and CRO strategy that turns your data into real business growth.",
     keyword: "conversion rate optimization agency India",
     changeFreq: "monthly",
     priority: 0.7,
