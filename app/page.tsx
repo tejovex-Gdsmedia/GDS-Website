@@ -39,6 +39,19 @@ export default function HomePage() {
       {/* Hero Section — Asymmetric Editorial Brutalist */}
       <Revealable>
         <section className="relative pt-40 pb-28 px-4 overflow-hidden border-b-2 border-brand-blue/40">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/videos/hero-poster.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/home-page-hero.mp4" type="video/mp4" />
+          </video>
+          {/* Light scrim so dark text stays readable over the video */}
+          <div className="absolute inset-0 bg-brand-bg/55" />
           <NeuralHero />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#121212_1px,transparent_1px),linear-gradient(to_bottom,#121212_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
 
