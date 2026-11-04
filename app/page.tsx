@@ -7,7 +7,7 @@ import { LogoMarquee } from "@/components/home/LogoMarquee";
 import { JsonLd } from "@/components/schema/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import Revealable from "@/components/animations/Revealable";
-import { NeuralHero, OrbitalType } from "@/components/home/LazyHero";
+import { NeuralHero } from "@/components/home/LazyHero";
 
 const routeConfig = getRoute("/")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
@@ -56,39 +56,33 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#121212_1px,transparent_1px),linear-gradient(to_bottom,#121212_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30" />
 
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              <div className="lg:col-span-8">
-                <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-8">
-                  // AI-Powered Digital Marketing for Indian MSMEs
-                </span>
-                <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter mb-8">
-                  Make AI Marketing Work For Your <span className="text-brand-blue underline decoration-brand-blue/50">Indian Business</span>
-                </h1>
-                <p className="font-mono text-lg sm:text-xl text-brand-ink/80 max-w-2xl mb-12 leading-relaxed">
-                  Accessible, affordable, and results-driven marketing without bloated agency timelines or studio costs. Strategy first, technology second.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-5">
-                  <a
-                    href={CALENDLY_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all text-center shadow-[6px_6px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5"
-                  >
-                    Book Your Strategy Call
-                  </a>
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-8 py-4 border-2 border-brand-green/60 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all text-center"
-                  >
-                    Chat on WhatsApp
-                  </a>
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 h-[420px] lg:h-[480px]">
-                <OrbitalType />
+            <div className="max-w-3xl">
+              <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-8">
+                // AI-Powered Digital Marketing for Indian MSMEs
+              </span>
+              <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter mb-8">
+                Make AI Marketing Work For Your <span className="text-brand-blue underline decoration-brand-blue/50">Indian Business</span>
+              </h1>
+              <p className="font-mono text-lg sm:text-xl text-brand-ink/80 max-w-2xl mb-12 leading-relaxed">
+                Accessible, affordable, and results-driven marketing without bloated agency timelines or studio costs. Strategy first, technology second.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-5">
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all text-center shadow-[6px_6px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5"
+                >
+                  Book Your Strategy Call
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 border-2 border-brand-green/60 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all text-center"
+                >
+                  Chat on WhatsApp
+                </a>
               </div>
             </div>
           </div>
