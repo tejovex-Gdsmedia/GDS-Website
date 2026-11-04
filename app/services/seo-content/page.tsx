@@ -32,7 +32,11 @@ export default function SeoContentPage() {
           faqSchema(content.faqs),
         ]}
       />
-      <ServicePageTemplate content={content} />
+      <ServicePageTemplate
+        content={content}
+        heroVideoSrc="/videos/seo-content-hero.mp4"
+        heroVideoPoster="/videos/hero-poster.jpg"
+      />
     </div>
   );
 }
