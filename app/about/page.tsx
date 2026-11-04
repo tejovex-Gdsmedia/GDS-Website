@@ -51,7 +51,7 @@ export default function AboutPage() {
         <section className="py-32 px-4 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-28">
             <div className="md:col-span-7">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/30 inline-block mb-6">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 rounded-full border border-brand-blue/20 inline-block px-3 py-1 mb-6">
                 // MISSION STATEMENT
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-ink uppercase tracking-tight mb-6 leading-tight">
@@ -64,8 +64,8 @@ export default function AboutPage() {
                 GDS Media was founded to bridge this gap. By combining cutting-edge AI creative tools with rigorous marketing strategy and automated sales funnels, we deliver premium agency results at a fraction of traditional shoot costs.
               </p>
             </div>
-            <div className="md:col-span-5 border-2 border-brand-blue/40 bg-brand-surface/40 p-8 sm:p-10">
-              <h3 className="font-display text-xl font-black text-brand-blue uppercase tracking-wider mb-6 border-b border-brand-blue/30 pb-3">
+            <div className="md:col-span-5 rounded-lg border border-brand-blue/20 bg-brand-surface/40 shadow-soft-sm p-8 sm:p-10">
+              <h3 className="font-display text-xl font-black text-brand-blue uppercase tracking-wider mb-6 border-b border-brand-blue/20 pb-3">
                 // Core Principles
               </h3>
               <ul className="space-y-6 font-mono text-xs sm:text-sm text-brand-ink/90">
@@ -88,9 +88,9 @@ export default function AboutPage() {
       </Revealable>
 
       <Revealable>
-        <section className="border-t-2 border-brand-blue/40 pt-28">
+        <section className="border-t border-brand-blue/15 pt-28">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
+            <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
               // MULTIDISCIPLINARY EXPERTISE
             </span>
             <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-4">
@@ -141,10 +141,10 @@ export default function AboutPage() {
       </Revealable>
 
       <Revealable>
-        <section className="py-32 bg-brand-bg border-t-2 border-brand-blue/40 px-4">
+        <section className="py-32 bg-brand-bg border-t border-brand-blue/15 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
                 // SOCIAL PROOF
               </span>
               <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-4">

@@ -62,7 +62,7 @@ export default function ContactForm() {
           name="name"
           required
           disabled={status === "submitting"}
-          className="w-full bg-transparent border-b border-brand-ink/20 pb-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-colors disabled:opacity-50"
+          className="w-full bg-brand-surface rounded-sm border border-brand-ink/15 px-4 py-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-all duration-300 disabled:opacity-50"
           placeholder="Rahul Sharma"
         />
       </div>
@@ -74,7 +74,7 @@ export default function ContactForm() {
           name="phone"
           required
           disabled={status === "submitting"}
-          className="w-full bg-transparent border-b border-brand-ink/20 pb-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-colors disabled:opacity-50"
+          className="w-full bg-brand-surface rounded-sm border border-brand-ink/15 px-4 py-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-all duration-300 disabled:opacity-50"
           placeholder="+91 98765 43210"
         />
       </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
           name="email"
           required
           disabled={status === "submitting"}
-          className="w-full bg-transparent border-b border-brand-ink/20 pb-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-colors disabled:opacity-50"
+          className="w-full bg-brand-surface rounded-sm border border-brand-ink/15 px-4 py-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-all duration-300 disabled:opacity-50"
           placeholder="rahul@business.com"
         />
       </div>
@@ -98,7 +98,7 @@ export default function ContactForm() {
           rows={3}
           required
           disabled={status === "submitting"}
-          className="w-full bg-transparent border-b border-brand-ink/20 pb-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-colors resize-none disabled:opacity-50"
+          className="w-full bg-brand-surface rounded-sm border border-brand-ink/15 px-4 py-3 text-brand-ink text-lg placeholder:text-brand-ink/30 focus:border-brand-blue focus:outline-none transition-all duration-300 resize-none disabled:opacity-50"
           placeholder="Tell us about your business and goals..."
         />
       </div>
@@ -112,7 +112,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full py-4 bg-brand-orange text-brand-ink font-semibold uppercase text-base hover:bg-brand-orange-vivid transition-colors mt-4 disabled:opacity-60"
+        className="w-full py-4 rounded-full bg-brand-orange text-brand-ink font-semibold uppercase text-base hover:bg-brand-orange-vivid transition-all duration-300 shadow-soft hover:shadow-soft-lg mt-4 disabled:opacity-60"
       >
         {status === "submitting" ? "Sending…" : "Send message"}
       </button>

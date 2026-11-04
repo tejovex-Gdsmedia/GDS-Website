@@ -17,7 +17,7 @@ interface ServicePageTemplateProps {
 function SectionBadgeHeading({ label, heading }: { label: string; heading: string }) {
   return (
     <>
-      <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-4">
+      <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border border-brand-blue/25 rounded-full px-4 py-1.5 mb-4">
         // {label}
       </span>
       <h2 className="font-display text-3xl sm:text-4xl font-black text-brand-ink uppercase tracking-tight mb-10">
@@ -38,7 +38,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
   return (
     <div>
       {/* ───────────────────────── Hero ───────────────────────── */}
-      <section className="pt-36 pb-20 px-4 bg-brand-bg border-b-2 border-brand-blue/40 relative overflow-hidden">
+      <section className="pt-36 pb-20 px-4 bg-brand-bg rounded-b-[40px] relative overflow-hidden">
         {heroVideoSrc ? (
           <>
             <video
@@ -71,7 +71,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
             </span>
           </nav>
 
-          <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-6">
+          <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border border-brand-blue/25 rounded-full px-4 py-1.5 mb-6">
             // {badge}
           </span>
 
@@ -89,7 +89,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all text-center shadow-[6px_6px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5"
+              className="rounded-full px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all duration-300 text-center shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5"
             >
               {hero.primaryButtonLabel}
             </a>
@@ -97,7 +97,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border-2 border-brand-green/60 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all text-center"
+              className="rounded-full px-8 py-4 border border-brand-green/40 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all duration-300 text-center"
             >
               Chat on WhatsApp
             </a>
@@ -124,7 +124,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
       </Revealable>
 
       {/* ───────────────────────── What we do ───────────────────────── */}
-      <section className="py-20 px-4 bg-brand-surface/40 border-y-2 border-brand-blue/10">
+      <section className="py-20 px-4 bg-brand-surface/40 rounded-t-[40px] rounded-b-[40px] -mt-6 -mb-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           <Revealable>
             <SectionBadgeHeading label="What's Included" heading={whatWeDo.heading} />
@@ -132,7 +132,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
           <div className="grid sm:grid-cols-2 gap-6">
             {whatWeDo.items.map((item, i) => (
               <Revealable key={item.title} delay={Math.min(i, 5) * 80}>
-                <div className="h-full border-2 border-brand-blue/20 bg-brand-surface p-6 hover:border-brand-blue/50 transition-colors">
+                <div className="h-full rounded-md border border-brand-blue/15 bg-brand-surface shadow-soft-sm p-8 hover:shadow-soft hover:border-brand-blue/40 transition-all duration-300">
                   <h3 className="font-display text-lg font-bold text-brand-ink mb-2">{item.title}</h3>
                   <p className="text-brand-ink/70 text-sm leading-relaxed">{item.description}</p>
                 </div>
@@ -152,7 +152,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
             {whyGds.items.map((item, i) => (
               <Revealable key={item.title} delay={Math.min(i, 5) * 60}>
                 <div className="flex items-start gap-4">
-                  <span className="flex-shrink-0 w-6 h-6 mt-0.5 flex items-center justify-center bg-brand-blue/10 border-2 border-brand-blue/40 text-brand-blue">
+                  <span className="flex-shrink-0 w-6 h-6 mt-0.5 flex items-center justify-center bg-brand-blue/10 rounded-full border border-brand-blue/25 text-brand-blue">
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
@@ -169,7 +169,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
       </section>
 
       {/* ───────────────────────── Process ───────────────────────── */}
-      <section className="py-20 px-4 bg-brand-surface/40 border-y-2 border-brand-blue/10">
+      <section className="py-20 px-4 bg-brand-surface/40 rounded-t-[40px] rounded-b-[40px] -mt-6 -mb-6 relative z-10">
         <div className="max-w-3xl mx-auto">
           <Revealable>
             <SectionBadgeHeading label="How It Works" heading={process.heading} />
@@ -208,7 +208,7 @@ export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: 
       </Revealable>
 
       {/* ───────────────────────── FAQ ───────────────────────── */}
-      <section className="py-20 px-4 bg-brand-surface/40 border-y-2 border-brand-blue/10">
+      <section className="py-20 px-4 bg-brand-surface/40 rounded-t-[40px] rounded-b-[40px] -mt-6 -mb-6 relative z-10">
         <div className="max-w-3xl mx-auto">
           <Revealable>
             <SectionBadgeHeading label="FAQ" heading="Frequently Asked Questions" />

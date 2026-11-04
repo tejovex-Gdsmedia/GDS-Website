@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/schema/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import Revealable from "@/components/animations/Revealable";
 import { NeuralHero } from "@/components/home/LazyHero";
+import HeroHeadline from "@/components/HeroHeadline";
 
 const routeConfig = getRoute("/")!;
 export const metadata: Metadata = buildMetadata(routeConfig);
@@ -38,7 +39,7 @@ export default function HomePage() {
 
       {/* Hero Section — Asymmetric Editorial Brutalist */}
       <Revealable>
-        <section className="relative pt-40 pb-28 px-4 overflow-hidden border-b-2 border-brand-blue/40">
+        <section className="relative pt-40 pb-28 px-4 overflow-hidden border-b border-brand-blue/15">
           <video
             autoPlay
             muted
@@ -57,12 +58,10 @@ export default function HomePage() {
 
           <div className="max-w-7xl mx-auto relative z-10">
             <div className="max-w-3xl">
-              <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border-2 border-brand-blue/40 px-4 py-1.5 mb-8">
+              <span className="inline-block font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 border border-brand-blue/25 rounded-full px-4 py-1.5 mb-8">
                 // AI-Powered Digital Marketing for Indian MSMEs
               </span>
-              <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter mb-8">
-                Make AI Marketing Work For Your <span className="text-brand-blue underline decoration-brand-blue/50">Indian Business</span>
-              </h1>
+              <HeroHeadline className="font-display text-5xl sm:text-7xl lg:text-8xl font-black text-brand-ink leading-[0.95] tracking-tighter mb-8" />
               <p className="font-mono text-lg sm:text-xl text-brand-ink/80 max-w-2xl mb-12 leading-relaxed">
                 Accessible, affordable, and results-driven marketing without bloated agency timelines or studio costs. Strategy first, technology second.
               </p>
@@ -71,7 +70,7 @@ export default function HomePage() {
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all text-center shadow-[6px_6px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5"
+                  className="rounded-full px-8 py-4 bg-brand-orange text-brand-ink font-mono font-black uppercase tracking-wider text-sm hover:bg-brand-orange-vivid transition-all duration-300 text-center shadow-soft hover:shadow-soft-lg hover:-translate-y-0.5"
                 >
                   Book Your Strategy Call
                 </a>
@@ -79,7 +78,7 @@ export default function HomePage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 border-2 border-brand-green/60 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all text-center"
+                  className="rounded-full px-8 py-4 border border-brand-green/40 text-brand-green font-mono font-bold uppercase tracking-wider text-sm hover:bg-brand-green/10 transition-all duration-300 text-center"
                 >
                   Chat on WhatsApp
                 </a>
@@ -91,7 +90,7 @@ export default function HomePage() {
 
       {/* Client Logos */}
       <Revealable>
-        <section className="py-16 border-b-2 border-brand-blue/40 bg-brand-bg px-4">
+        <section className="py-16 border-b border-brand-blue/15 bg-brand-bg px-4">
           <div className="max-w-7xl mx-auto">
             <p className="font-mono text-center text-xs font-bold uppercase tracking-widest text-brand-ink/50 mb-10">
               // Trusted by Indian business owners across retail, healthcare, real estate & more
@@ -104,9 +103,9 @@ export default function HomePage() {
       {/* Three Pillars — Asymmetric Editorial Grid */}
       <Revealable>
         <section className="py-32 px-4 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b-2 border-brand-blue/30 pb-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b border-brand-blue/15 pb-8">
             <div>
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
                 // FRAMEWORK ARCHITECTURE
               </span>
               <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4">
@@ -120,10 +119,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <Revealable delay={0}>
-              <div className="h-full border-2 border-brand-blue/40 bg-brand-surface/30 p-10 flex flex-col justify-between relative group hover:border-brand-blue hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 ease-out">
+              <div className="h-full rounded-lg border border-brand-blue/20 bg-brand-surface/30 shadow-soft-sm p-10 flex flex-col justify-between relative group hover:border-brand-blue/60 hover:-translate-y-2 hover:shadow-soft-lg transition-all duration-300 ease-out">
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 border border-brand-blue/30 transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20 transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
                       PILLAR 01
                     </span>
                     <span className="font-mono text-xs text-brand-ink/30">BLUEPRINT</span>
@@ -138,7 +137,7 @@ export default function HomePage() {
                 <div>
                   <Link
                     href="/services/brand-creative"
-                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
+                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 rounded-full border border-brand-blue/20 transition-all duration-300"
                   >
                     Explore Brand Strategy
                     <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -148,10 +147,10 @@ export default function HomePage() {
             </Revealable>
 
             <Revealable delay={120}>
-              <div className="h-full border-2 border-brand-blue/40 bg-brand-surface/30 p-10 flex flex-col justify-between relative group hover:border-brand-blue hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 ease-out">
+              <div className="h-full rounded-lg border border-brand-blue/20 bg-brand-surface/30 shadow-soft-sm p-10 flex flex-col justify-between relative group hover:border-brand-blue/60 hover:-translate-y-2 hover:shadow-soft-lg transition-all duration-300 ease-out">
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 border border-brand-blue/30 transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20 transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
                       PILLAR 02
                     </span>
                     <span className="font-mono text-xs text-brand-ink/30">STUDIO</span>
@@ -166,7 +165,7 @@ export default function HomePage() {
                 <div>
                   <Link
                     href="/services"
-                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
+                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 rounded-full border border-brand-blue/20 transition-all duration-300"
                   >
                     Explore Creative Studio
                     <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -176,10 +175,10 @@ export default function HomePage() {
             </Revealable>
 
             <Revealable delay={240}>
-              <div className="h-full border-2 border-brand-blue/40 bg-brand-surface/30 p-10 flex flex-col justify-between relative group hover:border-brand-blue hover:-translate-y-2 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 ease-out">
+              <div className="h-full rounded-lg border border-brand-blue/20 bg-brand-surface/30 shadow-soft-sm p-10 flex flex-col justify-between relative group hover:border-brand-blue/60 hover:-translate-y-2 hover:shadow-soft-lg transition-all duration-300 ease-out">
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 border border-brand-blue/30 transition-colors group-hover:bg-brand-blue group-hover:text-white">
+                    <span className="font-mono text-xs font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20 transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white">
                       PILLAR 03
                     </span>
                     <span className="font-mono text-xs text-brand-ink/30">GROWTH</span>
@@ -194,7 +193,7 @@ export default function HomePage() {
                 <div>
                   <Link
                     href="/services/performance-marketing"
-                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30"
+                    className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 rounded-full border border-brand-blue/20 transition-all duration-300"
                   >
                     Explore Growth Engine
                     <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
@@ -208,10 +207,10 @@ export default function HomePage() {
 
       {/* Comparison Section — Brutalist Table */}
       <Revealable>
-        <section className="py-32 bg-brand-bg border-y-2 border-brand-blue/40 px-4">
+        <section className="py-32 bg-brand-bg border-y border-brand-blue/15 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
                 // COMPARATIVE MATRIX
               </span>
               <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-6">
@@ -223,8 +222,8 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="border-2 border-red-500/40 bg-red-950/10 p-10">
-                <h3 className="font-display text-2xl font-black text-red-400 uppercase mb-8 border-b border-red-500/30 pb-4">
+              <div className="rounded-lg border border-red-500/25 bg-red-950/10 shadow-soft-sm p-10">
+                <h3 className="font-display text-2xl font-black text-red-400 uppercase mb-8 border-b border-red-500/20 pb-4">
                   [X] Traditional Agencies
                 </h3>
                 <ul className="space-y-6 font-mono text-sm text-brand-ink/80">
@@ -247,8 +246,8 @@ export default function HomePage() {
                 </ul>
               </div>
 
-              <div className="border-2 border-brand-blue bg-brand-blue/5 p-10">
-                <h3 className="font-display text-2xl font-black text-brand-blue uppercase mb-8 border-b border-brand-blue/40 pb-4">
+              <div className="rounded-lg border border-brand-blue/50 bg-brand-blue/5 shadow-soft-sm p-10">
+                <h3 className="font-display text-2xl font-black text-brand-blue uppercase mb-8 border-b border-brand-blue/25 pb-4">
                   [✓] GDS Lead-to-Sale Engine
                 </h3>
                 <ul className="space-y-6 font-mono text-sm text-brand-ink/90">
@@ -278,9 +277,9 @@ export default function HomePage() {
       {/* Case Studies / Work Preview */}
       <Revealable>
         <section className="py-32 px-4 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b-2 border-brand-blue/30 pb-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b border-brand-blue/15 pb-8">
             <div>
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
                 // PORTFOLIO ARCHIVE
               </span>
               <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4">
@@ -289,7 +288,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/work"
-              className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline mt-4 md:mt-0 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30 inline-block"
+              className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline mt-4 md:mt-0 bg-brand-blue/10 px-4 py-2 rounded-full border border-brand-blue/20 inline-block transition-all duration-300"
             >
               View All Case Studies →
             </Link>
@@ -305,10 +304,10 @@ export default function HomePage() {
 
       {/* FAQ Section */}
       <Revealable>
-        <section className="py-32 bg-brand-bg border-t-2 border-brand-blue/40 px-4">
+        <section className="py-32 bg-brand-bg border-t border-brand-blue/15 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20">
-              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/30">
+              <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
                 // KNOWLEDGE BASE
               </span>
               <h2 className="font-display text-4xl sm:text-6xl font-black text-brand-ink uppercase tracking-tighter mt-4">
@@ -318,9 +317,9 @@ export default function HomePage() {
 
             <div className="space-y-6">
               {HOME_FAQS.map((faq, i) => (
-                <div key={i} className="border-2 border-brand-blue/30 bg-brand-surface/40 p-8 hover:border-brand-blue transition-colors">
+                <div key={i} className="rounded-md border border-brand-blue/15 bg-brand-surface/40 shadow-soft-sm p-8 hover:shadow-soft hover:border-brand-blue/40 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono text-xs font-black text-brand-blue bg-brand-blue/10 px-2 py-0.5 border border-brand-blue/30">
+                    <span className="font-mono text-xs font-black text-brand-blue bg-brand-blue/10 px-2 py-0.5 rounded-full border border-brand-blue/20">
                       Q.0{i + 1}
                     </span>
                     <h3 className="font-display text-lg sm:text-xl font-black text-brand-ink uppercase tracking-tight">

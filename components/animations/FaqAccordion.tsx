@@ -32,7 +32,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
         return (
           <div
             key={item.question}
-            className="border-2 border-brand-blue/20 bg-brand-surface overflow-hidden transition-colors hover:border-brand-blue/40"
+            className="rounded-md border border-brand-blue/15 bg-brand-surface shadow-soft-sm overflow-hidden transition-all duration-300 hover:shadow-soft hover:border-brand-blue/35"
           >
             <h3>
               <button
@@ -47,7 +47,7 @@ export function FaqAccordion({ items }: FaqAccordionProps) {
                   {item.question}
                 </span>
                 <span
-                  className={`flex-shrink-0 w-7 h-7 flex items-center justify-center border-2 border-brand-blue/40 text-brand-blue transition-transform duration-300 ${
+                  className={`flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-full border border-brand-blue/25 text-brand-blue transition-transform duration-300 ${
                     isOpen ? "rotate-45" : ""
                   }`}
                   aria-hidden="true"

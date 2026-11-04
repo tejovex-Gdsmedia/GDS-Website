@@ -172,7 +172,7 @@ function NeuralCard({ pos, delay, label, value, sub, barW, spark }: {
   spark?: number[];
 }) {
   return (
-    <div style={{ position:"fixed", zIndex:25, minWidth:168, background:"rgba(255,255,255,0.88)", border:"1px solid rgba(0,141,187,0.22)", backdropFilter:"blur(16px)", WebkitBackdropFilter:"blur(16px)", padding:"18px 22px", opacity:0, animation:`neuralIn 0.7s ease ${delay} forwards, neuralBob 5s ease-in-out 2.7s infinite`, ...pos }}>
+    <div style={{ position:"fixed", zIndex:25, minWidth:168, background:"rgba(255,255,255,0.88)", border:"1px solid rgba(0,141,187,0.18)", borderRadius:"var(--radius-md)", boxShadow:"var(--shadow-soft)", backdropFilter:"blur(16px)", WebkitBackdropFilter:"blur(16px)", padding:"18px 22px", opacity:0, animation:`neuralIn 0.7s ease ${delay} forwards, neuralBob 5s ease-in-out 2.7s infinite`, ...pos }}>
       <div style={{ fontFamily:"monospace", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"#008DBB", marginBottom:7 }}>{label}</div>
       <div style={{ fontFamily:"sans-serif", fontSize:28, fontWeight:700, lineHeight:1, color:"#172B4D" }}>{value}</div>
       <div style={{ fontFamily:"monospace", fontSize:9, color:"rgba(23,43,77,0.5)", marginTop:5 }}>{sub}</div>

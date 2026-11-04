@@ -14,7 +14,7 @@ interface ExpertiseCardProps {
  */
 export function ExpertiseCard({ icon, title, description }: ExpertiseCardProps) {
   return (
-    <div className="group relative w-full h-[230px] rounded-xl overflow-hidden flex items-center justify-center bg-[linear-gradient(-45deg,#008DBB_0%,#FF9810_100%)] transition-shadow duration-500 hover:shadow-2xl">
+    <div className="group relative w-full h-[230px] rounded-md overflow-hidden flex items-center justify-center bg-[linear-gradient(-45deg,#008DBB_0%,#FF9810_100%)] transition-shadow duration-500 hover:shadow-soft-lg">
       <span className="w-12 h-12 text-white transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-0 group-hover:-rotate-45">
         {icon}
       </span>

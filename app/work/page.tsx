@@ -63,7 +63,7 @@ export default function WorkPage() {
       <Revealable>
         <section className="py-20 px-4 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 border border-brand-blue/35">
+          <span className="font-mono text-xs font-black uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-3 py-1 rounded-full border border-brand-blue/20">
             // INTERACTIVE MAGAZINE ARCHIVE
           </span>
           <h2 className="font-display text-3xl sm:text-5xl font-black text-brand-ink uppercase tracking-tighter mt-4 mb-4">
@@ -74,7 +74,7 @@ export default function WorkPage() {
           </p>
         </div>
 
-        <div className="w-full h-[650px] border-2 border-brand-blue/40 bg-brand-bg relative shadow-2xl">
+        <div className="w-full h-[650px] rounded-lg border border-brand-blue/20 bg-brand-bg relative shadow-soft-lg overflow-hidden">
           <MagazineWrapper
             images={PORTFOLIO_IMAGES}
             background="#ffffff"

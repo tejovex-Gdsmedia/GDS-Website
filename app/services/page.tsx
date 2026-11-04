@@ -64,11 +64,11 @@ export default function ServicesPage() {
           {SERVICES_LIST.map((srv, idx) => (
             <div
               key={srv.href}
-              className="border-2 border-brand-blue/30 bg-brand-surface/30 p-8 flex flex-col justify-between hover:border-brand-blue transition-colors relative group"
+              className="rounded-md border border-brand-blue/15 bg-brand-surface/30 shadow-soft-sm p-8 flex flex-col justify-between hover:shadow-soft hover:border-brand-blue/40 transition-all duration-300 relative group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2.5 py-1 border border-brand-blue/30">
+                  <span className="font-mono text-[10px] font-black text-brand-blue uppercase tracking-widest bg-brand-blue/10 px-2.5 py-1 rounded-full border border-brand-blue/20">
                     // {srv.category}
                   </span>
                   <span className="font-mono text-xs text-brand-ink/30">SVC.{idx < 9 ? `0${idx + 1}` : idx + 1}</span>
@@ -83,7 +83,7 @@ export default function ServicesPage() {
               <div>
                 <Link
                   href={srv.href}
-                  className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 border border-brand-blue/30 group-hover:bg-brand-orange group-hover:text-brand-ink transition-all"
+                  className="font-mono text-xs font-black uppercase tracking-wider text-brand-blue hover:underline inline-flex items-center gap-2 bg-brand-blue/10 px-4 py-2 rounded-full border border-brand-blue/20 group-hover:bg-brand-orange group-hover:text-brand-ink transition-all duration-300"
                 >
                   Learn More →
                 </Link>

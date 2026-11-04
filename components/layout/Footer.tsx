@@ -27,7 +27,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-bg border-t-2 border-brand-blue/40">
+    <footer className="bg-brand-bg border-t border-brand-blue/15 rounded-t-lg">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
@@ -98,7 +98,7 @@ export function Footer() {
           </div>
 
           {/* CTA column */}
-          <div className="bg-brand-surface/50 border-2 border-brand-blue/30 p-6 flex flex-col justify-between">
+          <div className="rounded-md bg-brand-surface/50 border border-brand-blue/15 shadow-soft-sm p-6 flex flex-col justify-between">
             <div>
               <h3 className="text-xs font-mono font-black text-brand-blue uppercase tracking-widest mb-4">
                 // Direct Action
@@ -112,7 +112,7 @@ export function Footer() {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center text-xs font-mono font-black uppercase tracking-wider px-4 py-3 bg-brand-orange text-brand-ink hover:bg-brand-orange-vivid transition-colors"
+                className="rounded-full w-full text-center text-xs font-mono font-black uppercase tracking-wider px-4 py-3 bg-brand-orange text-brand-ink hover:bg-brand-orange-vivid transition-all duration-300 shadow-soft-sm"
               >
                 Book Strategy Call
               </a>
@@ -120,7 +120,7 @@ export function Footer() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center text-xs font-mono font-bold uppercase tracking-wider px-4 py-3 border-2 border-brand-green/60 text-brand-green hover:bg-brand-green/10 transition-colors"
+                className="rounded-full w-full text-center text-xs font-mono font-bold uppercase tracking-wider px-4 py-3 border border-brand-green/40 text-brand-green hover:bg-brand-green/10 transition-all duration-300"
               >
                 Chat on WhatsApp
               </a>
@@ -129,7 +129,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t-2 border-brand-ink/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-16 pt-8 border-t border-brand-ink/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs font-mono text-brand-ink/40 uppercase tracking-wider">
             © {currentYear} {BRAND_NAME}. ALL RIGHTS RESERVED. // {SITE_URL}
           </p>

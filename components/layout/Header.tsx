@@ -30,7 +30,7 @@ export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-bg/95 backdrop-blur-md border-b-2 border-brand-blue/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-brand-bg/95 backdrop-blur-md border-b border-brand-blue/15 shadow-soft-sm">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -63,12 +63,12 @@ export function Header() {
                     </svg>
                   </button>
                   {/* Dropdown */}
-                  <div className="absolute top-full left-0 w-96 bg-brand-bg border-2 border-brand-blue/40 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 grid gap-1">
+                  <div className="absolute top-full left-0 w-96 rounded-md bg-brand-bg border border-brand-blue/15 shadow-soft-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 p-4 grid gap-1">
                     {link.children!.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-3 py-2.5 rounded hover:bg-brand-blue/10 transition-colors"
+                        className="block px-3 py-2.5 rounded-sm hover:bg-brand-blue/10 transition-colors duration-300"
                       >
                         <span className="block text-xs font-mono font-bold text-brand-ink hover:text-brand-blue">
                           {child.label}
@@ -101,7 +101,7 @@ export function Header() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 border-2 border-brand-green/60 text-brand-green font-bold hover:bg-brand-green/10 transition-all group-hover:translate-x-1 group-hover:scale-105 whitespace-nowrap"
+                className="rounded-full text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 border border-brand-green/40 text-brand-green font-bold hover:bg-brand-green/10 transition-all duration-300 group-hover:scale-105 whitespace-nowrap"
               >
                 WhatsApp
               </a>
@@ -111,7 +111,7 @@ export function Header() {
                 href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 bg-brand-orange text-brand-ink font-extrabold hover:bg-brand-orange-vivid transition-all shadow-[4px_4px_0px_0px_rgba(23,43,77,0.15)] hover:translate-x-0.5 hover:translate-y-0.5 group-hover:scale-105 whitespace-nowrap"
+                className="rounded-full text-xs font-mono uppercase tracking-wider px-4 xl:px-5 py-2.5 bg-brand-orange text-brand-ink font-extrabold hover:bg-brand-orange-vivid transition-all duration-300 shadow-soft hover:shadow-soft-lg group-hover:scale-105 whitespace-nowrap"
               >
                 Book Strategy Call
               </a>
@@ -120,7 +120,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-3 border-2 border-brand-blue/40 text-brand-blue bg-brand-bg"
+            className="lg:hidden p-3 rounded-sm border border-brand-blue/25 text-brand-blue bg-brand-bg"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -138,7 +138,7 @@ export function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden bg-brand-bg border-t-2 border-brand-blue/40 max-h-[85vh] overflow-y-auto">
+        <div className="lg:hidden bg-brand-bg border-t border-brand-blue/15 rounded-b-lg shadow-soft max-h-[85vh] overflow-y-auto">
           <nav className="px-6 py-6 flex flex-col gap-3" aria-label="Mobile navigation">
             {NAV_LINKS.map((link) =>
               link.children ? (
@@ -151,7 +151,7 @@ export function Header() {
                     <span>{servicesOpen ? "[-]" : "[+]"}</span>
                   </button>
                   {servicesOpen && (
-                    <div className="pl-4 flex flex-col gap-2 mt-2 border-l-2 border-brand-blue/30">
+                    <div className="pl-4 flex flex-col gap-2 mt-2 border-l border-brand-blue/20">
                       {link.children.map((child) => (
                         <Link
                           key={child.href}
@@ -185,7 +185,7 @@ export function Header() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-center text-xs font-mono uppercase font-bold px-4 py-3 border-2 border-brand-green/60 text-brand-green hover:bg-brand-green/10 transition-all group-hover:translate-x-1 group-hover:scale-105"
+                  className="rounded-full text-center text-xs font-mono uppercase font-bold px-4 py-3 border border-brand-green/40 text-brand-green hover:bg-brand-green/10 transition-all duration-300 group-hover:scale-105"
                 >
                   WhatsApp Us
                 </a>
@@ -195,7 +195,7 @@ export function Header() {
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-center text-xs font-mono font-extrabold px-4 py-3 bg-brand-orange text-brand-ink hover:bg-brand-orange-vivid transition-colors group-hover:scale-105"
+                  className="rounded-full text-center text-xs font-mono font-extrabold px-4 py-3 bg-brand-orange text-brand-ink hover:bg-brand-orange-vivid transition-all duration-300 shadow-soft group-hover:scale-105"
                 >
                   Book Strategy Call
                 </a>

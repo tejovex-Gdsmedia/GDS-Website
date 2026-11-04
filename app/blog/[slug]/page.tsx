@@ -127,7 +127,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             }
             if (block.type === "table") {
               return (
-                <div key={i} className="not-prose mb-8 overflow-x-auto border border-brand-blue/15">
+                <div key={i} className="not-prose mb-8 overflow-x-auto rounded-md border border-brand-blue/15">
                   <table className="w-full text-sm border-collapse">
                     <thead>
                       <tr className="bg-brand-blue/10">
