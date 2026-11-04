@@ -14,8 +14,12 @@ html,
 body {
   /* NeuralHero's decorative orbit rings and other full-bleed effects are
      deliberately positioned wider than the viewport on purpose; without
-     this they create real horizontal scroll/overflow on narrow screens. */
-  overflow-x: hidden;
+     this they create real horizontal scroll/overflow on narrow screens.
+     "clip" (not "hidden") on purpose: any overflow value other than
+     visible here turns body into its own scroll container, which breaks
+     position:sticky for descendants (e.g. the process page's
+     CardsRotateSlider pinned track) relative to the real viewport. */
+  overflow-x: clip;
 }
 
 body {
