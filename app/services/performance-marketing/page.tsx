@@ -32,7 +32,11 @@ export default function PerformanceMarketingPage() {
           faqSchema(content.faqs),
         ]}
       />
-      <ServicePageTemplate content={content} />
+      <ServicePageTemplate
+        content={content}
+        heroVideoSrc="/videos/performance-marketing-hero.mp4"
+        heroVideoPoster="/videos/hero-poster.jpg"
+      />
     </div>
   );
 }

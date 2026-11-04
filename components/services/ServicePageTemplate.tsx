@@ -9,6 +9,9 @@ import { ServiceClosingCta } from "@/components/services/ServiceClosingCta";
 
 interface ServicePageTemplateProps {
   content: ServicePageContent;
+  /** Optional hero background video for this page only — replaces BeamBackground when set. */
+  heroVideoSrc?: string;
+  heroVideoPoster?: string;
 }
 
 function SectionBadgeHeading({ label, heading }: { label: string; heading: string }) {
@@ -29,14 +32,32 @@ function SectionBadgeHeading({ label, heading }: { label: string; heading: strin
  * What we do, Why GDS Media, Process, Who it's for, FAQ, closing CTA.
  * Every page passes its own ServicePageContent; nothing here is page-specific.
  */
-export function ServicePageTemplate({ content }: ServicePageTemplateProps) {
+export function ServicePageTemplate({ content, heroVideoSrc, heroVideoPoster }: ServicePageTemplateProps) {
   const { hero, problem, whatWeDo, whyGds, process, whoFor, faqs, closingCta, badge } = content;
 
   return (
     <div>
       {/* ───────────────────────── Hero ───────────────────────── */}
       <section className="pt-36 pb-20 px-4 bg-brand-bg border-b-2 border-brand-blue/40 relative overflow-hidden">
-        <BeamBackground />
+        {heroVideoSrc ? (
+          <>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster={heroVideoPoster}
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src={heroVideoSrc} type="video/mp4" />
+            </video>
+            {/* Light scrim so dark text stays readable over the video */}
+            <div className="absolute inset-0 bg-brand-bg/80" />
+          </>
+        ) : (
+          <BeamBackground />
+        )}
         <div className="max-w-5xl mx-auto relative z-10">
           <nav className="flex items-center gap-2 font-mono text-xs text-brand-ink/50 mb-8" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-brand-blue transition-colors">HOME</Link>
