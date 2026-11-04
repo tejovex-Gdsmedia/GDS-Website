@@ -32,7 +32,11 @@ export default function BrandCreativePage() {
           faqSchema(content.faqs),
         ]}
       />
-      <ServicePageTemplate content={content} />
+      <ServicePageTemplate
+        content={content}
+        heroVideoSrc="/videos/brand-content-hero.mp4"
+        heroVideoPoster="/videos/hero-poster.jpg"
+      />
     </div>
   );
 }
