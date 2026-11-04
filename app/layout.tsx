@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Work_Sans } from "next/font/google";
+import { Playfair_Display, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -17,11 +17,9 @@ const workSans = Work_Sans({
 });
 
 // Heading font — hero/section/page headings, large display headings, marketing headlines.
-// Outfit: a rounded, soft-geometric sans, replacing the sharper serif used
-// in the previous brutalist design pass.
-const outfit = Outfit({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-playfair-display",
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
 });
@@ -44,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" className={`${workSans.variable} ${outfit.variable}`}>
+    <html lang="en-IN" className={`${workSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
 

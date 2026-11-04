@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-heading: var(--font-outfit), var(--font-work-sans), system-ui, sans-serif;
+  --font-heading: var(--font-playfair-display), Georgia, serif;
   --font-body: var(--font-work-sans), system-ui, sans-serif;
 
   /* Shape tokens — single source of truth for the soft/curved design

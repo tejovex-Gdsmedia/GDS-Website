@@ -34,8 +34,8 @@ module.exports = {
       fontFamily: {
         // Body copy, nav, buttons, labels, cards — Work Sans.
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
-        // Headings — Outfit, a rounded sans (see app/layout.tsx / globals.css).
-        display: ["var(--font-heading)", "system-ui", "sans-serif"],
+        // Headings — Playfair Display (see app/layout.tsx / globals.css).
+        display: ["var(--font-heading)", "Georgia", "serif"],
         // This brutalist theme uses "font-mono" purely as a styling choice
         // for UI copy (nav/buttons/labels/cards), not for real code — so it
         // follows the body font too, per the typography update.
