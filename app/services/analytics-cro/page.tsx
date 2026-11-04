@@ -32,7 +32,11 @@ export default function AnalyticsCroPage() {
           faqSchema(content.faqs),
         ]}
       />
-      <ServicePageTemplate content={content} />
+      <ServicePageTemplate
+        content={content}
+        heroVideoSrc="/videos/analytics-cro-hero.mp4"
+        heroVideoPoster="/videos/hero-poster.jpg"
+      />
     </div>
   );
 }
